@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+        font-family:"Lucida Grande", "Lucida Sans";
+        font-size: 20px;
+		color:#666;
+		margin: 0;
+      padding: 0;
+      }
+	  
+ul {list-style-type:none;}
+
+fieldset {
+	border:solid 2px #FF9F9F;
+  padding: 25px;
+   width:80%;
+  	margin: 0 auto;
+
+}
+legend {
+	color:inherit;
+	font-weight:bold;
+	
+	}
+
+.meter { 
+	width:235px;
+	height: 30px;
+	position: relative;
+	background: #555;
+	border:solid 2px #CCCCCC;
+	color:#666;
+	border-radius:4px;
+
+}
+.meter > span {
+	padding-left: 5px;
+	display: block;
+	height: 100%;
+	background-color: #FFC4C4;
+	position: relative;
+	overflow: hidden;
+}
+
+.regform label {
+    width:350px;
+    margin-top: 3px;
+    display:inline-block;
+    float:left;
+    padding:3px;
+}
+.regform input {
+    height:20px; 
+    width:220px; 
+    padding:5px 8px;
+}
+.regform textarea {
+	padding:4px; 
+	width:230px;
+    height:50px; 
+
+	}
+
+
+.regform input, .regform textarea { 
+    border:1px solid #aaa;
+    border-radius:4px;
+}
+.regform input:focus, .regform textarea:focus{
+    background: #fff; 
+    border:1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+}
+
+.selectbox{
+	height:32px; 
+    width:239px; 
+    padding:5px 8px;
+
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+	
+	 
+	
+	}
+/* Button Style */
+
+
+input[type=submit] , input[type=button]{
+background-color: #6C6;
+border:solid 2px #CCCCCC;
+margin-bottom:2px;
+height:35px;
+width:239px;
+	color:#666;
+font-size:20px;
+
+
+
+}
+input[type=submit]:hover{
+	background-color:#8DA4F1;
+}
+
+
