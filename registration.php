@@ -46,7 +46,7 @@
     <li>
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="customerdomainname" id="customerdomainname">
+        <input type="text" name="domain_name" id="customerdomainname">
    		</p>
         
         <p>
@@ -63,58 +63,58 @@
  <label for="zispahandle">Hosting Company</label>        
         
         <?php
-function myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $strMaskName, $strOrderField, $strMethod="asc") {
-include('dbconnector.php');
-
-   //
-   // PHP DYNAMIC DROP-DOWN BOX - HTML SELECT
-   //
-   // 2012-10 - 2006-05 http://kimbriggs.com/computers/
-   //
-   // Function creates a drop-down box
-   // by dynamically querying ID-Name pair from a lookup table.
-   //
-   // Parameters:
-   // intIdField = Integer "ID" field of table, usually the primary key.
-   // strMaskName = What shows up first in the drop-down box.
-   // strMethod = Sort as asc=ascending (default) or desc for descending.
-   // strNameField = Name field that user picks as a value.
-   // strNameOrdinal = $_POST name handles multiple drop-downs on one page.
-   // strOrderField = Which field you want results sorted by.
-   // strTableName = Name of MySQL table containing intIDField and strNameField.
-   //
-   // Returns:
-   // HTML Drop-Down Box Mark-up Code
-   //
-   
-
-   echo "<select class=\"selectbox\" name=\"$strNameOrdinal\">\n";
-   echo "<option value=\"NULL\">".$strMaskName."</option>\n";
-
-   $strQuery = "select $hosting_company_id, $strNameField
-               from $strTableName
-               order by $strOrderField $strMethod";
-
-   $rsrcResult = mysqli_query($link,$strQuery);
-
-
-   while($arrayRow = mysqli_fetch_assoc($rsrcResult)) {
-      $strA = $arrayRow["$hosting_company_id"];
-      $strB = $arrayRow["$strNameField"];
-      echo "<option value=\"$strA\">$strB</option>\n";
-   }
-
-    echo "</select>";
-  } 
-
-$hosting_company_id = 'hosting_company_id';
-$strNameField = 'company_name';
-$strTableName = 'hosting_company';
-$strNameOrdinal = 'state_id_mg';
-$strMaskName = 'Zispa Handle';
-$strOrderField = 'hosting_company_id';
-myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $strMaskName, $strOrderField, $strMethod="asc");
-?>
+	 function myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $strMaskName, $strOrderField, $strMethod="asc") {
+			include('dbconnector.php');
+			
+			   //
+			   // PHP DYNAMIC DROP-DOWN BOX - HTML SELECT
+			   //
+			   // 2012-10 - 2006-05 http://kimbriggs.com/computers/
+			   //
+			   // Function creates a drop-down box
+			   // by dynamically querying ID-Name pair from a lookup table.
+			   //
+			   // Parameters:
+			   // intIdField = Integer "ID" field of table, usually the primary key.
+			   // strMaskName = What shows up first in the drop-down box.
+			   // strMethod = Sort as asc=ascending (default) or desc for descending.
+			   // strNameField = Name field that user picks as a value.
+			   // strNameOrdinal = $_POST name handles multiple drop-downs on one page.
+			   // strOrderField = Which field you want results sorted by.
+			   // strTableName = Name of MySQL table containing intIDField and strNameField.
+			   //
+			   // Returns:
+			   // HTML Drop-Down Box Mark-up Code
+			   //
+			   
+			
+			   echo "<select class=\"selectbox\" name=\"$strNameOrdinal\">\n";
+			   echo "<option value=\"NULL\">".$strMaskName."</option>\n";
+			
+			   $strQuery = "select $hosting_company_id, $strNameField
+						   from $strTableName
+						   order by $strOrderField $strMethod";
+			
+			   $rsrcResult = mysqli_query($link,$strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($rsrcResult)) {
+				  $strA = $arrayRow["$hosting_company_id"];
+				  $strB = $arrayRow["$strNameField"];
+				  echo "<option value=\"$strA\">$strB</option>\n";
+			   }
+			
+				echo "</select>";
+			  } 
+			
+			$hosting_company_id = 'hosting_company_id';
+			$strNameField = 'company_name';
+			$strTableName = 'hosting_company';
+			$strNameOrdinal = 'state_id_mg';
+			$strMaskName = 'Zispa Handle';
+			$strOrderField = 'hosting_company_id';
+			myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $strMaskName, $strOrderField, $strMethod="asc");
+			?>
         
         
         </p>
@@ -122,7 +122,7 @@ myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $
          
         <p>
     	<label for="customerdomainowner">Domain Owner:</label>
-        <input type="text" name="customerdomainowner" id="customerdomainowner">
+        <input type="text" name="domainOwner" id="customerdomainowner">
    	   </p>
        
         <p>
@@ -160,12 +160,12 @@ myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $
     
        <p>
         <label for="domainusage">Proposed Domain Usage:</label>
-        <input type="text" name="domainusage" id="domainusage">
+        <input type="text" name="domain_usage" id="domainusage">
       	</p>
     	
        <p>
     	<label for="customerorgname">Domain Owner Organisation Name:</label>
-        <input type="text" name="customerorgname" id="customerorgname">
+        <input type="text" name="domain_owner_org" id="customerorgname">
         </p>
         
        
