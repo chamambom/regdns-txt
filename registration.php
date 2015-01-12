@@ -36,7 +36,7 @@
 
 
 
-<form method="post" enctype="multipart/form-data" action="process.php" onSubmit="return" class="regform">
+<form method="post" action="process.php" onSubmit="return" class="regform">
 
 <fieldset>
 <legend>Africom ZISPA Domain Registration Form</legend>
