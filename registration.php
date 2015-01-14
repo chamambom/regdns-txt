@@ -60,63 +60,28 @@
       	</p>
         
         <p>
- <label for="zispahandle">Hosting Company</label>        
+             <label for="zispahandle">Hosting Company</label>        
         
-        <?php
-	 function myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $strMaskName, $strOrderField, $strMethod="asc") {
-			include('dbconnector.php');
-			
-			   //
-			   // PHP DYNAMIC DROP-DOWN BOX - HTML SELECT
-			   //
-			   // 2012-10 - 2006-05 http://kimbriggs.com/computers/
-			   //
-			   // Function creates a drop-down box
-			   // by dynamically querying ID-Name pair from a lookup table.
-			   //
-			   // Parameters:
-			   // intIdField = Integer "ID" field of table, usually the primary key.
-			   // strMaskName = What shows up first in the drop-down box.
-			   // strMethod = Sort as asc=ascending (default) or desc for descending.
-			   // strNameField = Name field that user picks as a value.
-			   // strNameOrdinal = $_POST name handles multiple drop-downs on one page.
-			   // strOrderField = Which field you want results sorted by.
-			   // strTableName = Name of MySQL table containing intIDField and strNameField.
-			   //
-			   // Returns:
-			   // HTML Drop-Down Box Mark-up Code
-			   //
+
+			 <select class="selectbox" name ="hosting_company_id">;
+			 <option value="" selected>Select Below</option>;
 			   
-			
-			   echo "<select class=\"selectbox\" name=\"$strNameOrdinal\">\n";
-			   echo "<option value=\"NULL\">".$strMaskName."</option>\n";
-			
-			   $strQuery = "select $hosting_company_id, $strNameField
-						   from $strTableName
-						   order by $strOrderField $strMethod";
+			   <?php
+			   include('dbconnector.php');
+			   $strQuery = "select hosting_company_id,company_name
+						   from hosting_company";
 			
 			   $rsrcResult = mysqli_query($link,$strQuery);
 			
 			
 			   while($arrayRow = mysqli_fetch_assoc($rsrcResult)) {
-				  $strA = $arrayRow["$hosting_company_id"];
-				  $strB = $arrayRow["$strNameField"];
+				  $strA = $arrayRow["hosting_company_id"];
+				  $strB = $arrayRow["company_name"];
 				  echo "<option value=\"$strA\">$strB</option>\n";
-			   }
-			
-				echo "</select>";
-			  } 
-			
-			$hosting_company_id = 'hosting_company_id';
-			$strNameField = 'company_name';
-			$strTableName = 'hosting_company';
-			$strNameOrdinal = 'state_id_mg';
-			$strMaskName = 'Zispa Handle';
-			$strOrderField = 'hosting_company_id';
-			myDropdown($hosting_company_id, $strNameField, $strTableName, $strNameOrdinal, $strMaskName, $strOrderField, $strMethod="asc");
-			?>
-        
-        
+			  }				  
+					  
+		     ?>	             
+             </select>		      
         </p>
         
          
@@ -126,8 +91,8 @@
    	   </p>
        
         <p>
-    	<label for="customerorganisationdisc">Description of domain owner's organisation:</label>
-        <textarea name="customerorganisationdisc" id="customerorganisationdisc"></textarea>
+    	<label for="domain_owner_org_desc">Description of domain owner's organisation:</label>
+        <textarea name="domain_owner_org_desc" id="domain_owner_org_desc"></textarea>
         </p>
         
          <p>
@@ -142,7 +107,25 @@
        
         <p>
     	<label for="Country">Domain Owner Country:</label>
-        <input type="text" name="country" id="country">  	
+        <select class="selectbox" name ="country">;
+			  <?php
+		
+			   $country_strQuery = "select name,country_id
+						            from country";
+			
+			   $country_rsrcResult = mysqli_query($link,$country_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($country_rsrcResult)) {
+				  $country_strA = $arrayRow["country_id"];
+				  $country_strB = $arrayRow["name"];
+				  echo "<option value=\"$country_strA\">$country_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+             </select>		      
+        
+        	
    	   </p>
         
     </li>
@@ -160,12 +143,12 @@
     
        <p>
         <label for="domainusage">Proposed Domain Usage:</label>
-        <input type="text" name="domain_usage" id="domainusage">
+        <input type="text" name="domain_usage" id="domain_usage">
       	</p>
     	
        <p>
     	<label for="customerorgname">Domain Owner Organisation Name:</label>
-        <input type="text" name="domain_owner_org" id="customerorgname">
+        <input type="text" name="domain_owner_org_name" id="domain_owner_org_name">
         </p>
         
        
@@ -186,12 +169,12 @@
     <li>
     	<p>
     	<label for="customerphysicaladdr">Domain Owner Physical Address:</label>
-        <input type="text" name="customerphysicaladdr" id="customerphysicaladdr">
+        <textarea name="address_detail" id="customerphysicaladdr"></textarea>
     	</p>
         
         <p>
     	<label for="customerpostaladdr">Domain Owner Postal Address:</label>
-        <input type="text" name="customerpostaladdr" id="customerpostaladdr">
+        <textarea name="customerpostaladdr" id="customerpostaladdr"></textarea>
     	</p>
         
         

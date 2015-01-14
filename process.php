@@ -7,16 +7,27 @@ include('dbconnector.php');
 $domain_name = $_POST['domain_name'];
 $domain_usage = $_POST['domain_usage'];
 $domainOwner = $_POST['domainOwner'];
-$domain_owner_org = $_POST['domain_owner_org'];
+$domain_owner_org_name = $_POST['domain_owner_org_name'];
 $hosting_company_id = $_POST['hosting_company_id'];
+$domain_owner_org_desc= $_POST["domain_owner_org_desc"];
 
+$address_detail=$_POST["address_detail"];
+$city=$_POST["city"];
+$address_type_id=$_POST["address_type_id"];
+$country_id=$_POST["country_id"];
+$hosting_company_id=$_POST["hosting_company_id"];
 
 // Attempt insert query execution
-$sql = "INSERT INTO domain_details (domain_id,domain_name,domain_usage,domainOwner,domain_owner_org,hosting_company_id)
- VALUES (NULL,'$domain_name', '$domain_usage','$domainOwner','$domain_owner_org' ,2)";
+$sql = "INSERT INTO domain_details (domain_id,domain_name,domain_usage,domainOwner,domain_owner_org_name,hosting_company_id,domain_owner_org_desc)
+ VALUES (NULL,'$domain_name', '$domain_usage','$domainOwner','$domain_owner_org_name' ,'$hosting_company_id' ,'$domain_owner_org_desc')";
  
 $result= mysqli_query($link, $sql);
- 
+
+
+$sql2= "INSERT INTO address (address_id,address_detail,city,domain_id,address_type_id,country_id,hosting_company_id)
+VALUES (NULL,'$address_detail','$city,$domain_id','$address_type_id','$country_id','$hosting_company_id')"; 
+
+$result1= mysqli_query($link, $sql2);
 
 //$current_id=mysqli_insert_id($link);
 
