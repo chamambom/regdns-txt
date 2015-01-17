@@ -15,19 +15,43 @@ $address_detail=$_POST["address_detail"];
 $city=$_POST["city"];
 $address_type_id=$_POST["address_type_id"];
 $country_id=$_POST["country_id"];
-$hosting_company_id=$_POST["hosting_company_id"];
 
 // Attempt insert query execution
 $sql = "INSERT INTO domain_details (domain_id,domain_name,domain_usage,domainOwner,domain_owner_org_name,hosting_company_id,domain_owner_org_desc)
- VALUES (NULL,'$domain_name', '$domain_usage','$domainOwner','$domain_owner_org_name' ,'$hosting_company_id' ,'$domain_owner_org_desc')";
+ VALUES (NULL,'$domain_name','$domain_usage','$domainOwner','$domain_owner_org_name' ,'$hosting_company_id' ,'$domain_owner_org_desc')";
+ $result= mysqli_query($link, $sql);
  
-$result= mysqli_query($link, $sql);
+ if(!($result)){
+							  
+							   echo "ERROR: Couldnt execute $sql. because" . mysqli_error($link);
+							
+						  } else{
+							 
+								echo "Records added successfully.";
+						  }
 
+$current_id=mysqli_insert_id($link);
+echo $current_id ;
 
 $sql2= "INSERT INTO address (address_id,address_detail,city,domain_id,address_type_id,country_id,hosting_company_id)
-VALUES (NULL,'$address_detail','$city,$domain_id','$address_type_id','$country_id','$hosting_company_id')"; 
+VALUES (NULL,'$address_detail','$city','$current_id','$address_type_id','$country_id','$hosting_company_id')"; 
+
+
+  
+
 
 $result1= mysqli_query($link, $sql2);
+
+
+		if(!($result1)){
+			
+			 echo "ERROR: Couldnt execute $sql2. because" . mysqli_error($link);
+		  
+		} else{
+		   
+			  echo "Second Records added successfully.";
+		}
+
 
 //$current_id=mysqli_insert_id($link);
 
@@ -43,14 +67,6 @@ $result1= mysqli_query($link, $sql2);
 
 
 
-		if(!($result)){
-			
-			 echo "ERROR: Couldnt execute $sql. because" . mysqli_error($link);
-		  
-		} else{
-		   
-			  echo "Records added successfully.";
-		}
 		 
 		// Close connection
 		mysqli_close($link);

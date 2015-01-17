@@ -97,7 +97,7 @@
         
          <p>
         <label for="city">Domain Owner Town/City:</label>
-        <select name="town" class="selectbox" size="1">
+        <select name="city" class="selectbox" size="1">
         <option value="" selected>Select Below </option>
         <option value="Harare">Harare</option>
   		<option value="Gweru">Gweru</option>
@@ -107,7 +107,8 @@
        
         <p>
     	<label for="Country">Domain Owner Country:</label>
-        <select class="selectbox" name ="country">;
+        <select class="selectbox" name ="country_id">;
+        <option value="" selected>Select Below</option>;
 			  <?php
 		
 			   $country_strQuery = "select name,country_id
@@ -168,15 +169,55 @@
 <ul id="page_3">
     <li>
     	<p>
-    	<label for="customerphysicaladdr">Domain Owner Physical Address:</label>
+    	<label for="customerphysicaladdr">Domain Owner:
+            <select class="selectbox" name ="address_type_id">;
+			  <?php
+		
+			   $address_strQuery = "select address_type_id,address_type
+						            from address_type";
+			
+			   $address_rsrcResult = mysqli_query($link,$address_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($address_rsrcResult)) {
+				  $address_strA = $arrayRow["address_type_id"];
+				  $address_strB = $arrayRow["address_type"];
+				  echo "<option value=\"$address_strA\">$address_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+             </select>		   
+        
+        </label>
         <textarea name="address_detail" id="customerphysicaladdr"></textarea>
+        
     	</p>
         
-        <p>
-    	<label for="customerpostaladdr">Domain Owner Postal Address:</label>
-        <textarea name="customerpostaladdr" id="customerpostaladdr"></textarea>
-    	</p>
+       <?php /*?> <p>
+    	<label for="customerpostaladdr">Domain Owner
+         <select class="selectbox" name ="address_type_id[]">;
+			  <?php
+		
+			   $address_strQuery = "select address_type_id,address_type
+						            from address_type";
+			
+			   $address_rsrcResult = mysqli_query($link,$address_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($address_rsrcResult)) {
+				  $address_strA = $arrayRow["address_type_id"];
+				  $address_strB = $arrayRow["address_type"];
+				  echo "<option value=\"$address_strA\">$address_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+             </select>		   
         
+        </label>
+        <textarea name="address_detail" id="customerpostaladdr"></textarea>
+       
+    	</p>
+        <?php */?>
         
         <p>
     	<label for="customertel">Domain Owner Telephone:</label>
