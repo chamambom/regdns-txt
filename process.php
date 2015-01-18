@@ -13,7 +13,7 @@ $domain_owner_org_desc= $_POST["domain_owner_org_desc"];
 
 $address_detail=$_POST["address_detail"];
 $city=$_POST["city"];
-$address_type_id=$_POST["address_type_id"];
+
 $country_id=$_POST["country_id"];
 
 // Attempt insert query execution
@@ -33,11 +33,18 @@ $sql = "INSERT INTO domain_details (domain_id,domain_name,domain_usage,domainOwn
 $current_id=mysqli_insert_id($link);
 echo $current_id ;
 
+
+$address_type_id= $_POST['address_type_id'];
+	
+foreach ( $address_type_id as $key => $value )
+{
+  echo 'Textbox #'.htmlentities($key).' has this value: ';
+  echo htmlentities($value);
+}
+
+
 $sql2= "INSERT INTO address (address_id,address_detail,city,domain_id,address_type_id,country_id,hosting_company_id)
-VALUES (NULL,'$address_detail','$city','$current_id','$address_type_id','$country_id','$hosting_company_id')"; 
-
-
-  
+VALUES (NULL,'$address_detail','$city','$current_id','$value','$country_id','$hosting_company_id')";  
 
 
 $result1= mysqli_query($link, $sql2);
@@ -51,6 +58,10 @@ $result1= mysqli_query($link, $sql2);
 		   
 			  echo "Second Records added successfully.";
 		}
+		
+//$sql3= "INSERT INTO address (address_id,address_detail,city,domain_id,address_type_id,country_id,hosting_company_id)
+//VALUES (NULL,'$address_detail','$city','$current_id','$value','$country_id','$hosting_company_id')"; 
+
 
 
 //$current_id=mysqli_insert_id($link);
