@@ -170,7 +170,7 @@
     <li>
     	<p>
     	<label for="customerphysicaladdr">Domain Owner:
-            <select class="selectbox" name ="address_type_id[]">;
+            <select class="selectbox" name ="address_type_id1">;
 			  <?php
 		
 			   $address_strQuery = "select address_type_id,address_type
@@ -189,13 +189,13 @@
              </select>		   
         
         </label>
-        <textarea name="address_detail" id="customerphysicaladdr"></textarea>
+        <textarea name="address_detail1" id="customerphysicaladdr"></textarea>
         
     	</p>
         
         <p>
     	<label for="customerpostaladdr">Domain Owner
-         <select class="selectbox" name ="address_type_id[]">;
+         <select class="selectbox" name ="address_type_id2">;
 			  <?php
 		
 			   $address_strQuery = "select address_type_id,address_type
@@ -214,7 +214,7 @@
              </select>		   
         
         </label>
-        <textarea name="address_detail" id="customerpostaladdr"></textarea>
+        <textarea name="address_detail2" id="customerpostaladdr"></textarea>
        
     	</p>
         

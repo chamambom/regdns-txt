@@ -10,9 +10,11 @@ $domainOwner = $_POST['domainOwner'];
 $domain_owner_org_name = $_POST['domain_owner_org_name'];
 $hosting_company_id = $_POST['hosting_company_id'];
 $domain_owner_org_desc= $_POST["domain_owner_org_desc"];
-
-$address_detail=$_POST["address_detail"];
+$address_detail1=$_POST["address_detail1"];  
+$address_detail2=$_POST["address_detail2"];
 $city=$_POST["city"];
+$address_type_id1= $_POST['address_type_id1'];
+$address_type_id2= $_POST['address_type_id2'];
 
 $country_id=$_POST["country_id"];
 
@@ -31,21 +33,26 @@ $sql = "INSERT INTO domain_details (domain_id,domain_name,domain_usage,domainOwn
 						  }
 
 $current_id=mysqli_insert_id($link);
+
 echo $current_id ;
 
 
-$address_type_id= $_POST['address_type_id'];
-	
-foreach ( $address_type_id as $key => $value )
-{
-  echo 'Textbox #'.htmlentities($key).' has this value: ';
-  echo htmlentities($value);
-}
+
+//$address_type_id2= $_POST['address_type_id2'];
+
+//foreach ( $address_type_id as $key => $value )
+//{
+//  echo 'Textbox #'.htmlentities($key).' has value: ';
+//  echo htmlentities($value);
+//}
+
+//unset($value);
+
 
 
 $sql2= "INSERT INTO address (address_id,address_detail,city,domain_id,address_type_id,country_id,hosting_company_id)
-VALUES (NULL,'$address_detail','$city','$current_id','$value','$country_id','$hosting_company_id')";  
-
+  VALUES (NULL,'$address_detail1','$city','$current_id','$address_type_id1','$country_id','$hosting_company_id') 
+         ,(NULL,'$address_detail2','$city','$current_id','$address_type_id2','$country_id','$hosting_company_id')";
 
 $result1= mysqli_query($link, $sql2);
 
