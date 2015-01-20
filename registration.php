@@ -169,8 +169,8 @@
 <ul id="page_3">
     <li>
     	<p>
-    	<label for="customerphysicaladdr">Domain Owner:
-            <select class="selectbox" name ="address_type_id1">;
+    	<label for="customerphysicaladdr">Domain Owner:</label>
+            <select class="selectbox" name ="address_type_id1">
 			  <?php
 		
 			   $address_strQuery = "select address_type_id,address_type
@@ -188,14 +188,13 @@
 		     ?>	             
              </select>		   
         
-        </label>
         <textarea name="address_detail1" id="customerphysicaladdr"></textarea>
         
     	</p>
         
         <p>
-    	<label for="customerpostaladdr">Domain Owner
-         <select class="selectbox" name ="address_type_id2">;
+    	<label for="customerpostaladdr">Domain Owner</label>
+         <select class="selectbox" name ="address_type_id2">
 			  <?php
 		
 			   $address_strQuery = "select address_type_id,address_type
@@ -213,7 +212,6 @@
 		     ?>	             
              </select>		   
         
-        </label>
         <textarea name="address_detail2" id="customerpostaladdr"></textarea>
        
     	</p>
@@ -221,15 +219,90 @@
         
         <p>
     	<label for="customertel">Domain Owner Telephone:</label>
-        <input type="tel" name="customertel" id="customertel">
+         <select class="selectbox" name ="contact_type_id_1">
+			  <?php
+		
+			   $contact_strQuery = "select contact_type_id,contact_type
+						            from contact_type";
+			
+			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
+				  $contact_strA = $arrayRow["contact_type_id"];
+				  $contact_strB = $arrayRow["contact_type"];
+				  echo "<option value=\"$contact_strA\">$contact_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>		   
+        <input type="tel" name="contact_detail_1" id="customertel">
    		</p>
         <p>
     	<label for="customerfax">Domain Owner Fax Number:</label>
-        <input type="tel" name="customerfax" id="customerfax">
+        <select class="selectbox" name ="contact_type_id_2">
+			  <?php
+		
+			   $contact_strQuery = "select contact_type_id,contact_type
+						            from contact_type";
+			
+			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
+				  $contact_strA = $arrayRow["contact_type_id"];
+				  $contact_strB = $arrayRow["contact_type"];
+				  echo "<option value=\"$contact_strA\">$contact_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>		   
+        <input type="tel" name="contact_detail_2" id="customerfax">
   		</p>
+        
+          <p>
+    	<label for="customerfax">Domain Owner Mobile number:</label>
+        <select class="selectbox" name ="contact_type_id_3">
+			  <?php
+		
+			   $contact_strQuery = "select contact_type_id,contact_type
+						            from contact_type";
+			
+			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
+				  $contact_strA = $arrayRow["contact_type_id"];
+				  $contact_strB = $arrayRow["contact_type"];
+				  echo "<option value=\"$contact_strA\">$contact_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>		   
+        <input type="tel" name="contact_detail_3" id="customermobile">
+  		</p>
+        
+        
         <p>
     	<label for="customeremail">Domain Owner Email Address:</label>
-        <input type="email" name="customeremail" id="customeremail">
+        <select class="selectbox" name ="contact_type_id_4">
+			  <?php
+		
+			   $contact_strQuery = "select contact_type_id,contact_type
+						            from contact_type";
+			
+			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
+			
+			
+			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
+				  $contact_strA = $arrayRow["contact_type_id"];
+				  $contact_strB = $arrayRow["contact_type"];
+				  echo "<option value=\"$contact_strA\">$contact_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>		   
+        <input type="email" name="contact_detail_4" id="customeremail">
    		</p>
        
             
