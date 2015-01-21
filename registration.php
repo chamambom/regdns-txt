@@ -150,7 +150,7 @@
         
         <p>
         <label for="state">Domain Status:</label>
-        <select name="state" class="selectbox" id="domainstatus" size="1">
+        <select name="domstatus" class="selectbox" id="domainstatus" size="1">
         <option value="0" selected>Select Below </option>
         <option value="N">New</option>
   		<option value="D">Delete</option>
@@ -228,7 +228,7 @@
         
     </li>
     <li>
-<input onclick="collapseElement('page_1'); expandElement('page_2');" type="submit" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
+<input onclick="collapseElement('page_1'); expandElement('page_2');" type="button" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
     </li>
     
     <div class="meter"><span style="width:33%">1/3</span></div>
