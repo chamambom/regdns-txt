@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
         <link rel="stylesheet" type="text/css" href="css/jquery.validate.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <script src="js/jquery-1.3.2.js" type="text/javascript">       </script>
-        <script src="js/jquery.validate.js" type="text/javascript">        </script>
-        <script type="text/javascript">
+       <script src="js/jquery-1.3.2.js" type="text/javascript">       </script>
+        <script src="js/jquery.validate.js" type="text/javascript"></script>
+        
+       <script type="text/javascript">
             /* <![CDATA[ */
             jQuery(function(){
 				
@@ -25,28 +25,77 @@
                 expression: "if (!isNaN(VAL) && VAL) return true; else return false;",
                 message: "Please enter a valid mobile phone number"
                 });
-
-
 				
-                jQuery(".requiredfields").validate({
+                jQuery("#validcustomerdomainname").validate({
                     expression: "if (VAL) return true; else return false;",
                     message: " Please note that this field is a Required"
                 });
 				
-				jQuery(".selectbox").validate({
+				jQuery("#validdomain_owner_org_desc").validate({
+                    expression: "if (VAL) return true; else return false;",
+                    message: " Please note that this field is a Required"
+                });
+				
+				jQuery("#validcustomerdomainowner").validate({
+                    expression: "if (VAL) return true; else return false;",
+                    message: " Please note that this field is a Required"
+                });
+
+
+
+                jQuery("#validdomain_usage").validate({
+                    expression: "if (VAL) return true; else return false;",
+                    message: " Please note that this field is a Required"
+                });
+
+
+                jQuery("#vlaiddomain_owner_org_name").validate({
+                    expression: "if (VAL) return true; else return false;",
+                    message: " Please note that this field is a Required"
+                });
+
+                jQuery("#validcustomerphysicaladdr").validate({
+                    expression: "if (VAL) return true; else return false;",
+                    message: " Please note that this field is a Required"
+                });
+
+                jQuery("#validcustomerpostaladdr").validate({
+                    expression: "if (VAL) return true; else return false;",
+                    message: " Please note that this field is a Required"
+                });
+
+				
+				
+				jQuery("#city").validate({
                     expression: "if (VAL != '0') return true; else return false;",
                     message: "Please make a selection"
                 });
 				
-                jQuery("#customeremail").validate({
-                    expression: "if (VAL.match(/^[^\\W][a-zA-Z0-9\\_\\-\\.]+([a-zA-Z0-9\\_\\-\\.]+)*\\@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*\\.[a-zA-Z]{2,4}$/)) return true; else return false;",
+				  jQuery("#domainstatus").validate({
+                    expression: "if (VAL != '0') return true; else return false;",
+                    message: "Please make a selection"
+                });
+				
+				  jQuery("#hostingcompany").validate({
+                    expression: "if (VAL != '0') return true; else return false;",
+                    message: "Please make a selection"
+                });
+
+				
+	  jQuery("#customeremail").validate({
+	  expression: "if (VAL.match(/^[^\\W][a-zA-Z0-9\\_\\-\\.]+([a-zA-Z0-9\\_\\-\\.]+)*\\@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*\\.[a-zA-Z]{2,4}$/)) return true; else return false;",
                     message: "Please enter a valid Email address"
                 });
 				
-                jQuery("#").validate({
-                    expression: "if (VAL.match(/^[9][0-9]{9}$/)) return true; else return false;",
-                    message: "Should be a valid Mobile Number"
-                });
+				
+				jQuery('.regform').validated(function(){
+					
+					
+	  					
+				});
+				
+	  
+				
             });
             /* ]]> */
         </script>
@@ -86,7 +135,7 @@
 
 
 
-<form method="post" action="process.php" onSubmit="return" class="regform">
+<form method="post" action="process.php" onSubmit="return" id="regform">
 
 <fieldset>
 <legend>Africom ZISPA Domain Registration Form</legend>
@@ -96,13 +145,13 @@
     <li>
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="domain_name" id="customerdomainname" class="requiredfields">
+        <input type="text" name="domain_name"  id="validcustomerdomainname">
    		</p>
         
         <p>
         <label for="state">Domain Status:</label>
-        <select name="state" class="selectbox" size="1">
-        <option value="" selected>Select Below </option>
+        <select name="state" class="selectbox" id="domainstatus" size="1">
+        <option value="0" selected>Select Below </option>
         <option value="N">New</option>
   		<option value="D">Delete</option>
   		<option value="M">Modify</option>
@@ -113,7 +162,7 @@
              <label for="zispahandle">Hosting Company</label>        
         
 
-			 <select class="selectbox" name ="hosting_company_id" >
+			 <select class="selectbox" name ="hosting_company_id" id="hostingcompany" >
 			 <option value="0" >Select Below</option>
 			   
 			   <?php
@@ -137,18 +186,18 @@
          
         <p>
     	<label for="customerdomainowner">Domain Owner:</label>
-        <input type="text" name="domainOwner" id="customerdomainowner" class="requiredfields">
+        <input type="text" name="domainOwner"  id="validcustomerdomainowner">
    	   </p>
        
         <p>
     	<label for="domain_owner_org_desc">Description of domain owner's organisation:</label>
-        <textarea name="domain_owner_org_desc" id="domain_owner_org_desc" class="requiredfields"></textarea>
+        <textarea name="domain_owner_org_desc"  id="validdomain_owner_org_desc"></textarea>
         </p>
         
          <p>
         <label for="city">Domain Owner Town/City:</label>
-        <select name="city" class="selectbox" size="1">
-        <option value="" selected>Select Below </option>
+        <select name="city" class="selectbox" id= "city" size="1">
+        <option value="0" selected>Select Below </option>
         <option value="Harare">Harare</option>
   		<option value="Gweru">Gweru</option>
   		<option value="Bulawayo">Bulawayo</option>
@@ -179,7 +228,7 @@
         
     </li>
     <li>
-<input onclick="collapseElement('page_1'); expandElement('page_2');" type="button" value="Continue"/> <!--This hides the first page and shows the second page-->
+<input onclick="collapseElement('page_1'); expandElement('page_2');" type="button" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
     </li>
     
     <div class="meter"><span style="width: 33%">1/3</span></div>
@@ -192,20 +241,20 @@
     
        <p>
         <label for="domainusage">Proposed Domain Usage:</label>
-        <input type="text" name="domain_usage" id="domain_usage" class="requiredfields">
+        <input type="text" name="domain_usage"  id="validdomain_usage">
       	</p>
     	
        <p>
     	<label for="customerorgname">Domain Owner Organisation Name:</label>
-        <input type="text" name="domain_owner_org_name" id="domain_owner_org_name" class="requiredfields">
+        <input type="text" name="domain_owner_org_name"  id="vlaiddomain_owner_org_name">
         </p>
         
        
   </li>
     <li>
-<input onclick="collapseElement('page_2'); expandElement('page_3');" type="button" value="Continue" /> <!--This hides the first page and shows the second page-->    
+<input onclick="collapseElement('page_2'); expandElement('page_3');" type="button" value="Continue" class="bclicks" /> <!--This hides the first page and shows the second page-->    
 
-<input onclick="collapseElement('page_2'); expandElement('page_1');" type="button" value="Back" /> <!--This hides the second page and shows the first page-->
+<input onclick="collapseElement('page_2'); expandElement('page_1');" type="button" value="Back" class="bclicks" /> <!--This hides the second page and shows the first page-->
 
 </li>
 
@@ -238,7 +287,7 @@
              
              	   
         
-        <textarea name="address_detail1" id="customerphysicaladdr" class="requiredfields"></textarea>
+        <textarea name="address_detail1"  id="validcustomerphysicaladdr"></textarea>
         
     	</p>
         
@@ -261,7 +310,7 @@
 		     ?>	             
              </select>		   
         
-        <textarea name="address_detail2" id="customerpostaladdr" class="requiredfields"></textarea>
+        <textarea name="address_detail2"  id="validcustomerpostaladdr"></textarea>
        
     	</p>
         
@@ -353,8 +402,8 @@
             
      </li>   	
    <li>
-   <input onclick="collapseElement('page_3'); expandElement('page_2');" type="button" value="Back" /> <!--This hides the second page and shows the first page-->
-    <input type="submit" value="Submit" name="register" id="register">
+   <input onclick="collapseElement('page_3'); expandElement('page_2');" type="button" value="Back"  class="bclicks"/> <!--This hides the second page and shows the first page-->
+    <input type="submit" value="Submit" name="register" id="register" class="bclicks">
     </li>
     
     <div class="meter"><span style="width: 98%">3/3</span></div>

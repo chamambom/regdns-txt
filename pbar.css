@@ -26,7 +26,7 @@ legend {
 	}
 
 .meter { 
-	width:235px;
+	width:90%;
 	height: 30px;
 	position: relative;
 	background: #555;
@@ -44,32 +44,33 @@ legend {
 	overflow: hidden;
 }
 
-.regform label {
+#regform label {
     width:300px;
     margin-top: 3px;
     display:inline-block;
     float:left;
     padding:3px;
 }
-.regform input {
+#regform input[type=text], input[type=tel] ,input[type=email]{
     height:20px; 
     width:220px; 
     padding:5px 8px;
+    border:1px solid #aaa;
+    border-radius:4px;
+
 }
-.regform textarea {
+#regform textarea {
 	padding:4px; 
 	width:230px;
     height:70px;
 	position:inherit; 
+	    border:1px solid #aaa;
+    border-radius:4px;
+
 
 	}
 
-
-.regform input, .regform textarea { 
-    border:1px solid #aaa;
-    border-radius:4px;
-}
-.regform input:focus, .regform textarea:focus{
+#regform input:focus, #regform textarea:focus{
     background: #fff; 
     border:1px solid #555; 
     box-shadow: 0 0 3px #aaa; 
@@ -95,19 +96,19 @@ legend {
 	
 /* Button Style */
 
-input[type=submit] , input[type=button]{
-background-color: #6C6;
+.bclicks{
+background:#6C6;
 border:solid 2px #CCCCCC;
-margin-bottom:2px;
-height:35px;
-width:239px;
-	color:#666;
+color:#666;
 font-size:20px;
-
+width:12%;
+margin-bottom:2px;
+    border-radius:4px;
 
 
 }
-input[type=submit]:hover{
+
+input[type=button]:hover{
 	background-color:#8DA4F1;
 }
 
