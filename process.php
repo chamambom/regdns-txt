@@ -87,7 +87,9 @@ $result3= mysqli_query($link, $sql3);
      	// Close connection
 		mysqli_close($link);
 		
-//Code to be tried
+		
+		
+//Code sources to be tried
 
 //$address_type_id2= $_POST['address_type_id2'];
 //foreach ( $address_type_id as $key => $value )
