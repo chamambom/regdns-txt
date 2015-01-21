@@ -2,12 +2,14 @@
 /* CSS Document */
 
 
-body {
+html body {
         font-family:"Lucida Grande", "Lucida Sans";
         font-size: 16px;
 		color:#666;
 		margin: 0;
       padding: 0;
+	  background-color:#FFF;
+
       }
 	  
 ul {list-style-type:none;}
@@ -33,6 +35,7 @@ legend {
 	border:solid 2px #CCCCCC;
 	color:#666;
 	border-radius:4px;
+	margin:0px;
 
 }
 .meter > span {
@@ -43,6 +46,25 @@ legend {
 	position: relative;
 	overflow: hidden;
 }
+
+h4 {
+margin-top:0;
+color:#fff;
+background-color:#ef4136;
+text-align:center;
+width:100%;
+height:40px;
+padding-top:30px;
+border-radius:4px;
+
+}
+
+#regform{
+	
+		  	background:#F8FDEF;
+
+
+	}
 
 #regform label {
     width:300px;

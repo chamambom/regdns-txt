@@ -91,8 +91,7 @@
 				jQuery('.regform').validated(function(){
 					
 					
-	  					
-				});
+					});
 				
 	  
 				
@@ -134,10 +133,11 @@
 <body onLoad="collapsePages()">
 
 
-
 <form method="post" action="process.php" onSubmit="return" id="regform">
 
 <fieldset>
+<h4>Please Fill All The required Information in order to complete your domain registration !</h4>
+
 <legend>Africom ZISPA Domain Registration Form</legend>
 
 	<!--Page one-->
@@ -228,10 +228,10 @@
         
     </li>
     <li>
-<input onclick="collapseElement('page_1'); expandElement('page_2');" type="button" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
+<input onclick="collapseElement('page_1'); expandElement('page_2');" type="submit" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
     </li>
     
-    <div class="meter"><span style="width: 33%">1/3</span></div>
+    <div class="meter"><span style="width:33%">1/3</span></div>
 </ul>
 
 
@@ -406,7 +406,7 @@
     <input type="submit" value="Submit" name="register" id="register" class="bclicks">
     </li>
     
-    <div class="meter"><span style="width: 98%">3/3</span></div>
+    <div class="meter"><span style="width: 99.5%">3/3</span></div>
 </ul>
 </fieldset>
 </form>
