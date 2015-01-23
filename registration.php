@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,7 +132,6 @@
 <link rel="stylesheet" type="text/css" href="pbar.css">
 </head>
 <body onLoad="collapsePages()">
-
 
 <form method="post" action="process.php" onSubmit="return" id="regform">
 
