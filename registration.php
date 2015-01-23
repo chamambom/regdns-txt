@@ -396,7 +396,7 @@
 					  
 		     ?>	             
            </select>		   
-        <input type="email" name="contact_detail_4" id="customeremail" >
+        <input type="text" name="contact_detail_4" id="customeremail" >
    		</p>
        
             

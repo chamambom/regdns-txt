@@ -51,65 +51,40 @@
         
         1.  DOMAIN NAME and ACTION
 <?php
-
+session_start();
 error_reporting (E_ALL ^ E_NOTICE);
+
 include('dbconnector.php');
 
-//show results
-
-$query1 = "SELECT * FROM domain_details";
-$result1 = mysqli_query($link, $query1);
+$query1 = "SELECT * FROM domain_details WHERE domain_id=101";
+$myresult1 = mysqli_query($link, $query1);
  
-if ($result1) { //If it ran ok display the records
-	
-	echo 
-	'<table align="center" cellpadding="5" cellspacing="5" border="1">
-		<tr>
-			<td align="left"><b>* 1a. Full domain name:</b></td>
-			<td align="left"><b>* 1b. (N)ew or (M)odify or (D)elete.(N/M/D).:</b></td>
-     		<td align="left"><b>* 1a. Full domain name:</b></td>
-			<td align="left"><b>* 1a. Full domain name:</b></td>
-			<td align="left"><b>* 1a. Full domain name:</b></td>
-			<td align="left"><b>* 1a. Full domain name:</b></td>
-
-
-		</tr>';
-
-while ($row = mysqli_fetch_array ($result, MYSQLI_ASSOC)) {
-	echo 
-		'<tr>
-			<td align="left">' . $row['domain_name'] . '</td>
-			<td align="left">' . $row['domainOwner'] . '</td>
-			<td align="left">' . $row['domain_owner_org_name'] . '</td>
-			<td align="left">' . $row['domain_usage'] . '</td>
-			<td align="left">' . $row['hosting_company_id'] . '</td>
-			<td align="left">' . $row['domain_owner_org_desc'] . '</td>
-			<td align="left">' . $row['domstatus'] . '</td>
-
-
-
-		</tr>';
-	}
- 
-	echo '</table>';
- 
-mysqli_free_result($result1);
- 
-} else { //if it did not run ok
- 
-	//public message
-	echo '<p class="error">The current users could not be retrieved. We apologise for any inconvienience.</p>'; 
-	
-	//debugging message
-	echo '<p>' . mysqli_error($link) . '<br/><br/> Query: ' . $query1 . '</p>'; 
-}
-
-?>
-
-2.  DOMAIN OWNER
-
-<?php
- 
+if(mysqli_num_rows($myresult1)>0)
+		{	  
+		    echo "<table border ='1'>
+           <tr>
+           <th>domain_name &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</th> 
+           <th>domainOwner</th>
+		   </tr>";	
+			
+			while($row=mysqli_fetch_array($myresult1))
+			{
+			echo"<tr>";
+            echo("<td>".$row['domain_name']."</td>");
+			echo("<td>".$row['domainOwner']."</td>");
+			
+			echo("<td><a href='domaindetail.php?domain_id=" . $row["domain_id"] . "'>Generate Full Report For The Specific domain</a></td>");
+			echo"</tr>";
+            }
+            echo"</table>";
+			}
+			else
+			{
+			echo"<p id='thankyou' >Your Database Currently Holds No One Who Has Worked In $Country</p>";
+			}
+			
+mysqli_free_result($myresult1);
+			
 // Close database connection
 mysqli_close($link); 
 ?> 
