@@ -51,13 +51,10 @@ $sql3= "INSERT INTO contact (contact_id,contact_detail,contact_type_id,domain_id
 		      ,(NULL,'$contact_detail_3','$contact_type_id_3','$domain_id','$hosting_company_id')
 			  ,(NULL,'$contact_detail_4','$contact_type_id_4','$domain_id','$hosting_company_id')";
 			  
-$_SESSION['domain_id']=$domain_id;
-
-echo "My id" .$domain_id;
 
 $result3= mysqli_query($link, $sql3);
 
-
+$_SESSION['domain_id']=$domain_id;
 
 
 if (!($result1 && $result2 && $result3) ){
@@ -74,8 +71,11 @@ if (!($result1 && $result2 && $result3) ){
 		}	
 		
 		
+		
 		// commit transaction
         mysqli_commit($link);
+		
+		
 		
      	// Close connection
 		mysqli_close($link);
@@ -92,4 +92,5 @@ if (!($result1 && $result2 && $result3) ){
 //}
 //unset($value);
 
+//session_destroy();
 ?>

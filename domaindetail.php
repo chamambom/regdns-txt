@@ -1,13 +1,14 @@
 <?php session_start(); ?>
+<link rel="stylesheet" type="text/css" href="css/domtables.css">
+<link rel="stylesheet" type="text/css" href="main.css">
 <?php
-
 if(isset($_GET['domain_id']))
-$PiD=$_GET['domain_id'];
+$domain_id=$_GET['domain_id'];
 
 include('dbconnector.php');
 
 
-$selectdetail="SELECT * FROM domain_details WHERE domain_id=$PiD";
+$selectdetail="SELECT * FROM domain_details WHERE domain_id=$domain_id";
 
 $result=mysqli_query($link,$selectdetail);
 								 
@@ -70,6 +71,7 @@ else
 echo "No results fetched ";
 }
 
+//session_destroy();
 
 ?>
 </body>

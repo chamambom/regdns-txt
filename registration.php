@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +128,7 @@
 
 <meta charset="UTF-8">
 <title>Add Records Form</title>
-<link rel="stylesheet" type="text/css" href="pbar.css">
+<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body onLoad="collapsePages()">
 

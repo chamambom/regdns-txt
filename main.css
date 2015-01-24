@@ -16,8 +16,8 @@ ul {list-style-type:none;}
 
 fieldset {
 	border:solid 2px #FF9F9F;
-  padding: 25px;
-   width:85%;
+    padding: 25px;
+    width:85%;
   	margin: 0 auto;
 
 }
@@ -47,7 +47,7 @@ legend {
 	overflow: hidden;
 }
 
-h4 {
+fieldset h4 {
 margin-top:0;
 color:#fff;
 background-color:#ef4136;
@@ -59,11 +59,10 @@ border-radius:4px;
 
 }
 
+
 #regform{
 	
 		  	background:#F8FDEF;
-
-
 	}
 
 #regform label {
