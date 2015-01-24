@@ -14,8 +14,8 @@ $myresult1 = mysqli_query($link, $query1);
  
 if(mysqli_num_rows($myresult1)>0)
 		{	  
-		   echo "<table id='mytable' cellspacing='0' border ='0'>
-		   <tr><h4>Please verify your details using the link on your right of the domain details</h4></tr>
+		   echo "<table id='full_table_template' cellspacing='0' border ='0'>
+		   <tr><h4>Please verify your details using the link on the right side of your domain details below before sending it to ZISPA</h4></tr>
 		   <tr>
 		   <th scope='col'>Domain Name &nbsp;</th>
            <th scope='col'> Domain Owner</th>
@@ -35,7 +35,7 @@ if(mysqli_num_rows($myresult1)>0)
 
 
 			
-			echo("<td><a href='domaindetail.php?domain_id=" . $row["domain_id"] . "'>Verify if the details you entered for this domain are correct before you send to ZISPA</a></td>");
+			echo("<td><a href='domaindetail.php?domain_id=" . $row["domain_id"] . "'>Click here to verify domain details</a></td>");
 			echo"</tr>";
             }
             echo"</table>";
