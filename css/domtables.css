@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+/* domaintemplate table definition*/
 
 #full_table_template {
     width:85%;
@@ -10,6 +10,18 @@
 	border:solid 2px #FF9F9F;
 	padding:25px;
 }
+
+/* domaintdetail table definition*/
+
+#full_template{
+	 width:81%;
+	padding: 0;
+	margin: 12px auto;
+	border:solid 2px #FF9F9F;
+	padding:25px;
+
+	}
+
 h4{
 color:#fff;
 background-color:#ef4136;
