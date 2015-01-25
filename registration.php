@@ -76,13 +76,7 @@
                     message: "Please make a selection"
                 });
 				
-				  jQuery("#hostingcompany").validate({
-                    expression: "if (VAL != '0') return true; else return false;",
-                    message: "Please make a selection"
-                });
-
-				
-	  jQuery("#customeremail").validate({
+      jQuery("#customeremail").validate({
 	  expression: "if (VAL.match(/^[^\\W][a-zA-Z0-9\\_\\-\\.]+([a-zA-Z0-9\\_\\-\\.]+)*\\@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*\\.[a-zA-Z]{2,4}$/)) return true; else return false;",
                     message: "Please enter a valid Email address"
                 });
@@ -162,12 +156,10 @@
         
 
 			 <select class="selectbox" name ="hosting_company_id" id="hostingcompany" >
-			 <option value="0" >Select Below</option>
-			   
-			   <?php
+		   <?php
 			   include('dbconnector.php');
 			   $strQuery = "select hosting_company_id,company_name
-						   from hosting_company";
+						   from hosting_company WHERE hosting_company_id=1";
 			
 			   $rsrcResult = mysqli_query($link,$strQuery);
 			
