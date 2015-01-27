@@ -38,12 +38,16 @@ if(mysqli_num_rows($myresult1)>0)
 			echo("<td><a href='domaindetail.php?domain_id=" . $row["domain_id"] . "'>Click here to verify domain details</a></td>");
 			echo"</tr>";
             }
+
             echo"</table>";
 			}
 			else
 			{
 			echo"<p id='thankyou' >Your Database Currently Holds No One with this domain $domain_name</p>";
 			}
+			
+echo "<h5>Courtesy of the Service Management Center (SMC) Africom@2015</h5>";
+
 			
 mysqli_free_result($myresult1);
 

@@ -232,12 +232,12 @@
     
        <p>
         <label for="domainusage">Proposed Domain Usage:</label>
-        <input type="text" name="domain_usage"  id="validdomain_usage">
+        <input type="text" name="domain_usage"  id="validdomain_usage"/>
       	</p>
     	
        <p>
     	<label for="customerorgname">Domain Owner Organisation Name:</label>
-        <input type="text" name="domain_owner_org_name"  id="vlaiddomain_owner_org_name">
+        <input type="text" name="domain_owner_org_name"  id="vlaiddomain_owner_org_name"/>
         </p>
         
        
@@ -389,6 +389,108 @@
            </select>		   
         <input type="text" name="contact_detail_4" id="customeremail" >
    		</p>
+        
+        
+        
+        
+        
+        
+        
+        
+          <p>
+             <select class="selectbox" name ="name_server_type_id_1">
+			  <?php
+		
+			   $nameserver_strQuery = "select name_server_type_id,name
+						            from name_server_type WHERE name_server_type_id=2";
+			
+			   $nameserver_rsrcResult = mysqli_query($link,$nameserver_strQuery);
+			
+			   while($arrayRow = mysqli_fetch_assoc($nameserver_rsrcResult)) {
+				  $nameserver_strA = $arrayRow["name_server_type_id"];
+				  $nameserver_strB = $arrayRow["name"];
+				  echo "<option value=\"$nameserver_strA\" selected>$nameserver_strB</option>\n";
+			  }	
+			  			  
+					  
+		     ?>	             
+           </select>
+          <label for="hostname">Host Name:</label> <input type="text" name="hostname_1"  value="ns1.ai.co.zw"/>
+           <label for="ip address">IP Address:</label> <input type="text" name="ip_address_1"  value="41.221.144.2"/ >
+   		</p>
+        <p>
+        
+        <select class="selectbox" name ="name_server_type_id_2">
+			  <?php
+		
+			   $nameserver_strQuery = "select name_server_type_id,name
+						            from name_server_type WHERE name_server_type_id=1";
+			
+			   $nameserver_rsrcResult = mysqli_query($link,$nameserver_strQuery);
+			
+			   while($arrayRow = mysqli_fetch_assoc($nameserver_rsrcResult)) {
+				  $nameserver_strA = $arrayRow["name_server_type_id"];
+				  $nameserver_strB = $arrayRow["name"];
+				  echo "<option value=\"$nameserver_strA\" selected>$nameserver_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>		   
+       <label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_2"  value="ns2.ai.co.zw"/>
+       <label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_2" id="ipaddress" value="41.221.144.3"/ >
+
+
+</p>
+<p>        
+        
+        <select class="selectbox" name ="name_server_type_id_2">
+			  <?php
+		
+			   $nameservertype_strQuery = "select name_server_type_id,name
+						            from name_server_type WHERE name_server_type_id=1";
+			
+			   $nameservertype_rsrcResult = mysqli_query($link,$nameservertype_strQuery);
+			
+			   while($arrayRow = mysqli_fetch_assoc($nameservertype_rsrcResult)) {
+				  $nameservertype_strA = $arrayRow["name_server_type_id"];
+				  $nameservertype_strB = $arrayRow["name"];
+				  echo "<option value=\"$nameservertype_strA\" selected>$nameservertype_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>
+          
+         		   
+       <label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_3"  value="ns3.ai.co.zw"/>
+       <label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_3"  value="41.73.47.133"/ >
+
+   		</p>
+        
+        <p>
+        
+        
+         <select class="selectbox" name ="name_server_type_id_2">
+			  <?php
+		
+			   $nameserver_strQuery = "select name_server_type_id,name
+						            from name_server_type WHERE name_server_type_id=1";
+			
+			   $nameserver_rsrcResult = mysqli_query($link,$nameserver_strQuery);
+			
+			   while($arrayRow = mysqli_fetch_assoc($nameserver_rsrcResult)) {
+				  $nameserver_strA = $arrayRow["name_server_type_id"];
+				  $nameserver_strB = $arrayRow["name"];
+				  echo "<option value=\"$nameserver_strA\" selected>$nameserver_strB</option>\n";
+			  }				  
+					  
+		     ?>	             
+           </select>		   
+       <label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_4" id="hostname" value="ns4.ai.co.zw"/>
+       <label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_4"  value="41.221.159.50"/ >
+ 
+   		</p>
+
+        
        
             
      </li>   	
