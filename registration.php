@@ -209,7 +209,7 @@
 		</select>
    	   </p>
        
-        <p>
+        <p hidden>
     	<label for="Country">Domain Owner Country:</label>
         <select class="selectbox" name ="country_id">
 			  <?php

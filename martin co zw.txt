@@ -1,18 +1,4 @@
-<html>
-  <head>
-  	<title></title>
-<link rel="stylesheet" type="text/css" href="css/domtables.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-<?php
-session_start();
-
-function ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $domain_owner_org_name, $physical_address_detail, $postal_address_detail, $domain_owner_city, $domain_owner_country_name, $domain_owner_voice_phone, $domain_owner_faxnumber, $domain_owner_emailaddress ,$domain_owner_org_desc,$domain_usage) {
-    
-    $File = str_replace(".", " ", $full_domain_name) . ".txt"; 
- 	$Handle = fopen($File, 'w');
- 	$Data = "                              ZISPA
+                              ZISPA
                        CO.ZW Registration Office
 
              APPLICATION TO ESTABLISH A SUB-DOMAIN WITHIN
@@ -54,19 +40,19 @@ function ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $dom
       0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003
 
       1.  DOMAIN NAME and ACTION
-      1a. Full domain name......................: {$full_domain_name}
-      1b. (N)ew or (M)odify or (D)elete.(N/M/D).: {$domain_status}
+      1a. Full domain name......................: martin.co.zw
+      1b. (N)ew or (M)odify or (D)elete.(N/M/D).: D
 
       2.  DOMAIN OWNER
-      2a. Domain Owner..........: {$domain_owner}
-      2b. Organisation Name.....: {$domain_owner_org_name}
-      2c. Physical Address......: {$physical_address_detail}
-	  2d. Postal Address .......: {$postal_address_detail}
-      2e. Town/City.............: {$domain_owner_city}
-      2f. Country...............: {$domain_owner_country_name}
-      2g. Voice Phone...........: {$domain_owner_voice_phone}
-      2h. Fax Number............: {$domain_owner_faxnumber}
-      2i. E-mail Address........: {$domain_owner_emailaddress}
+      2a. Domain Owner..........: asdas
+      2b. Organisation Name.....: asdasad
+      2c. Physical Address......: asda
+	  2d. Postal Address .......: asdas
+      2e. Town/City.............: Harare
+      2f. Country...............: Zimbabwe
+      2g. Voice Phone...........: 13212
+      2h. Fax Number............: 123123
+      2i. E-mail Address........: chamambom@gmail.com
 	  
       3.  ADMIN/BILLING CONTACT
       3a. ZISPA Handle..........: Africom
@@ -81,8 +67,8 @@ function ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $dom
       3j. E-mail Address........: smc@afri-com.net
    
       4.  DESCRIPTION OF ORGANISATION/DOMAIN
-      4a. Description of domain owner's organisation..: {$domain_owner_org_desc}
-      4b. Proposed domain usage.: {$domain_usage}
+      4a. Description of domain owner's organisation..: asdas
+      4b. Proposed domain usage.: asdasd
 
       5.  TECHNICAL CONTACT
       5a. ZISPA Handle..........: Africom
@@ -120,54 +106,4 @@ function ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $dom
       following street address
       (Note: Post Office box or
       Post Office bag addresses
-      are not acceptable).......: {$physical_address_detail}";
-
-	fwrite($Handle, $Data);
-	fclose($Handle);
-
-	return $File;
-}   //end function 
-
-
-
-$full_domain_name = $_SESSION['domain_name'];
-$domain_status=$_SESSION['domstatus'];
-$domain_owner=$_SESSION['domainOwner'];
-$domain_owner_org_name=$_SESSION['domain_owner_org_name'];
-$physical_address_detail=$_SESSION['physical_address_detail'];
-$postal_address_detail=$_SESSION['postal_address_detail'];
-$domain_owner_city=$_SESSION['city'];
-$domain_owner_country_name=$_SESSION['name'];
-$domain_owner_voice_phone=$_SESSION['voicephone'];
-$domain_owner_faxnumber=$_SESSION['faxnumber'];
-$domain_owner_emailaddress=$_SESSION['emailaddress'];
-$domain_owner_org_desc=$_SESSION['domain_owner_org_desc'];
-$domain_usage=$_SESSION['domain_usage'];
-
-
-$downloadFileName = ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $domain_owner_org_name,$physical_address_detail, $postal_address_detail, $domain_owner_city, $domain_owner_country_name, $domain_owner_voice_phone, $domain_owner_faxnumber, $domain_owner_emailaddress,$domain_owner_org_desc,$domain_usage);
-
-echo"<h4> Please attach associated documents for domain $full_domain_name with domain Owner $domain_owner before sending to ZISPA </h4>";	
-
- 
- 
-
-echo"<div class='full_template'>";
-echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a href='./{$downloadFileName}'>View Template</a>";
-?>
-
-<p> attache</p>
-
-
-<?php
-echo "</div>" ;
-
-echo "<h5>Courtesy of the Service Management Center (SMC) Africom@2015</h5>";
-
-
-
-
-?>
-
-</body>
-</html>
+      are not acceptable).......: asda
