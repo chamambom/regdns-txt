@@ -1,17 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* domaintemplate table definition*/
-
-#full_table_template {
-    width:85%;
-    margin: 5px auto;
-	border:solid 2px #FF9F9F;
-	padding:25px;
-	font-size: 16px;	
-		  letter-spacing:2px;
-
-}
 
 .field-widget{
 	color:#090;
@@ -22,9 +11,39 @@
 #last_field-widget{
 	position:relative;
 	left:55%;
-	bottom:15px;
+	bottom:30px;
 	color:#090;
 	}
+#field-widget_x a{
+	background:#999;
+	float:right;
+	width:300px;
+	height:50px;
+	border:1px solid #666;
+	color:#FFF;
+	text-align:center;
+	font-size:17px;
+	padding-top:20px;
+		border-radius:4px;	
+
+	
+	}
+
+/* domaintemplate table definition*/
+
+#full_table_template {
+    width:85%;
+    margin: 5px auto;
+	border:solid 2px #FF9F9F;
+	padding:25px;
+	font-size: 16px;	
+		  letter-spacing:2px;
+		  border-radius:4px;	
+
+
+}
+
+
 
 /* domaintdetail table definition*/
 
@@ -33,28 +52,30 @@
 	width:81%;
     margin: 5px auto;
 	border:solid 2px #FF9F9F;
-	padding:25px;
+	padding:24px;
     letter-spacing:2px;
+	border-radius:4px;	
+
 	}
 
 h4{
 color:#fff;
 background-color:#EF413D;
 text-align:center;
-width:85%;
+width:84.9%;
 height:40px;
 margin: 5px auto;
 padding-top:30px;
 border-radius:4px;	
 	}
 h5{
-color:#fff;
-background-color:#8DC73F;
+color:#999;
+background-color:#BCED91;
 text-align:center;
 width:83.8%;
 height:12px;
 margin: 5px auto;
-padding:10px;
+padding:8px;
 border-radius:4px;	
 	}
 	
@@ -105,10 +126,11 @@ td.alt {
  color:#090;
   margin: 1.4em 0;
 	}
+	
 #poboxaddress{
 	width:420px;
 	height:120px;
-	border:solid 1px #036;
+	border:solid 0px #036;
 	margin-top:12px;
 	
 	}

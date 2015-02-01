@@ -1,12 +1,12 @@
 <?php session_start(); ?>
 <link rel="stylesheet" type="text/css" href="css/domtables.css">
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <?php
+
 if(isset($_GET['domain_id']))
 $domain_id=$_GET['domain_id'];
 
 include('dbconnector.php');
-
 
 //$selectdetail="SELECT * FROM domain_details WHERE domain_id=$domain_id";
 
@@ -25,17 +25,20 @@ $selectdetail ="SELECT domain_details.*, address.* ,contact.* ,hosting_company.*
 						 
 
 $result=mysqli_query($link,$selectdetail);
-
 								 
-if((mysqli_num_rows($result)) >0)		
-{						 
-    while ($row=mysqli_fetch_array($result, MYSQLI_ASSOC)) 
-	      {
+if((mysqli_num_rows($result)) >0){
+							 
+    while ($row=mysqli_fetch_array($result)){
 		
+
 	   echo"<h4> Below are the details you entered for domain ". $row['domain_name'] ." with domain Owner ". $row['domainOwner'] ." </h4>";	
 	   
 	   echo"<div id='full_template'>";
+	   echo "<div id='field-widget_x'><a href='templateX.php'> Generate template and attach associated documents</a></div>";
 	   
+ 
+	   echo "<div class='headings'> 0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003 </div>";
+   
 	   echo "<div class='headings'>1.  DOMAIN NAME and ACTION</div>";	
 	
 	   echo"<div class='field-label'><label for='DomainName'>* 1a. Full domain name......................:</label><span class='field-widget'> ". $row['domain_name'] ." </span></div>";
@@ -50,9 +53,9 @@ if((mysqli_num_rows($result)) >0)
 	   echo"<div class='field-label' ><label for='OrganisationNmae'>* 2b. Organisation Name.....:</label><span class='field-widget'> ". $row['domain_owner_org_name'] ." </span></div>";
 
 
-	   echo"<div class='field-label' ><label for='PhysicalAddress'>* 2c. Physical Address......:</label><span class='field-widget'> ". $row['address_detail'] ." </span></div>";
+	   echo"<div class='field-label' ><label for='PhysicalAddress'>* 2c. Physical Address......:</label><span class='field-widget'> ". $row['physical_address_detail']." </span></div>";
 			  
-	   echo"<div class='field-label'><label for='PostalAddress'>* 2d. Postal Address .......:</label><span class='field-widget'> ". $row['address_detail'] ." </span></div>";
+	   echo"<div class='field-label'><label for='PostalAddress'>* 2d. Postal Address .......:</label><span class='field-widget'> ". $row['postal_address_detail'] ." </span></div>";
 
 
 	
@@ -60,11 +63,11 @@ if((mysqli_num_rows($result)) >0)
 
 	   echo"<div class='field-label'><label for='Country'>* 2f. Country...............:</label><span class='field-widget'> ". $row['name'] ." </span></div>";
 
-	   echo"<div class='field-label'><label for='Mobile_Work_Phone '>* 2g. Voice Phone...........:</label><span class='field-widget'> ". $row['contact_detail'] ." </span></div>";
+	   echo"<div class='field-label'><label for='Mobile_Work_Phone '>* 2g. Voice Phone...........:</label><span class='field-widget'> ". $row['voicephone'] ." </span></div>";
 
-	   echo"<div class='field-label'><label for='FaxNumber'>&nbsp;&nbsp; 2h. Fax Number............:</label><span class='field-widget'> ". $row['contact_detail'] ." </span></div>";
+	   echo"<div class='field-label'><label for='FaxNumber'>&nbsp;&nbsp; 2h. Fax Number............:</label><span class='field-widget'> ". $row['faxnumber'] ." </span></div>";
 		
-	  echo"<div class='field-label'><label for='EmailAddress'>* 2i. E-mail Address........:</label><span class='field-widget'> ". $row['contact_detail'] ." </span></div>";
+	  echo"<div class='field-label'><label for='EmailAddress'>* 2i. E-mail Address........:</label><span class='field-widget'> ". $row['emailaddress'] ." </span></div>";
 
 
 
@@ -122,27 +125,27 @@ echo "<div class='headings'>3.  ADMIN/BILLING CONTACT</div>";
 		
 echo "<div class='headings'>6.  PRIMARY NAMESERVER</div> " ;
 
-	   echo"<div class='field-label'><label for='Email Address'>* 6a. Hostname..............:</label><span class='field-widget'> ". $row['host_name'] ." </span></div>";
+	   echo"<div class='field-label'><label for='Email Address'>* 6a. Hostname..............:</label><span class='field-widget'> ". $row['host_name1'] ." </span></div>";
 		
-	 echo" <div class='field-label'><label for='Email Address'>* 6b. IP Address............:</label><span class='field-widget'> ". $row['ip_address'] ." </span></div>";
-		
-		echo "<div class='headings'>SECONDARY NAMESERVER</div>";
-
-	echo"<div class='field-label'><label for='Email Address'>* 6c. Hostname..............:</label><span class='field-widget'> ". $row['host_name'] ." </span></div>";
-
-	echo"<div class='field-label'><label for='Email Address'>* 6d. IP Address............:</label><span class='field-widget'> ". $row['ip_address'] ." </span></div>";
+	 echo" <div class='field-label'><label for='Email Address'>* 6b. IP Address............:</label><span class='field-widget'> ". $row['ip_address1'] ." </span></div>";
 		
 		echo "<div class='headings'>SECONDARY NAMESERVER</div>";
 
-	   echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6e. Hostname..............:</label><span class='field-widget'> ". $row['host_name'] ." </span></div>";
+	echo"<div class='field-label'><label for='Email Address'>* 6c. Hostname..............:</label><span class='field-widget'> ". $row['host_name2'] ." </span></div>";
+
+	echo"<div class='field-label'><label for='Email Address'>* 6d. IP Address............:</label><span class='field-widget'> ". $row['ip_address2'] ." </span></div>";
 		
-			   echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6f. IP Address............:</label><span class='field-widget'> ". $row['ip_address'] ." </span></div>";
+		echo "<div class='headings'>SECONDARY NAMESERVER</div>";
+
+	   echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6e. Hostname..............:</label><span class='field-widget'> ". $row['host_name3'] ." </span></div>";
+		
+			   echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6f. IP Address............:</label><span class='field-widget'> ". $row['ip_address3'] ." </span></div>";
 		
 		echo "<div class='headings'>SECONDARY NAMESERVER</div>";
 		
-	echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6g. Hostname..............:</label><span class='field-widget'> ". $row['host_name'] ." </span></div>";
+	echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6g. Hostname..............:</label><span class='field-widget'> ". $row['host_name4'] ." </span></div>";
 
-		   echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6h. IP Address............:</label><span class='field-widget'> ". $row['ip_address'] ." </span></div>";
+		   echo"<div class='field-label'><label for='Email Address'>&nbsp;&nbsp;6h. IP Address............:</label><span class='field-widget'> ". $row['ip_address4'] ." </span></div>";
 		
 		   echo"<div id='poboxaddress'>
 	 <span class='headings'>* 7.  DOMICILIUM CITANDI ET EXECUTANDI</span>
@@ -153,28 +156,36 @@ echo "<div class='headings'>6.  PRIMARY NAMESERVER</div> " ;
       following street address
       (Note: Post Office box or
       Post Office bag addresses
-      are not acceptable).......:</div> <span id='last_field-widget'> ". $row['address_detail'] ." </span> </div>";
+      are not acceptable)..................................................................:</div> <span id='last_field-widget'> ". $row['physical_address_detail'] ." </span> </div>";
 
 	   
      echo("</div>");
 	 
-	} //end while loop
+	 
+	
 		
 		
 echo "<h5>Courtesy of the Service Management Center (SMC) Africom@2015</h5>";
 	 
-}  //end if
+
+$full_domain_name=$row['domain_name'];
+$_SESSION['domain_name'] = $full_domain_name;
+
+$domain_status=$row['domstatus'];
+$_SESSION['domstatus'] = $domain_status;
+
+
+}  //end while
+
+} //end if
 
 else
 {
 echo "No results fetched ";
 }
 
-
-
-//session_destroy();
-
 ?>
+
 
 </body>
 </html>

@@ -122,7 +122,7 @@
 
 <meta charset="UTF-8">
 <title>Add Records Form</title>
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body onLoad="collapsePages()">
 
@@ -138,20 +138,20 @@
     <li>
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="domain_name"  id="validcustomerdomainname">
+        <input type="text" name="domain_name"  id="validcustomerdomainname"> e.g africom.co.zw
    		</p>
         
         <p>
         <label for="state">Domain Status:</label>
-        <select name="domstatus" class="selectbox" id="domainstatus" size="1">
-        <option value="0" selected>Select Below </option>
+        <select name="domstatus" class="selectbox" id="domainstatus" size="1"> 
+        <option value="0" selected>Select Below </option> 
         <option value="N">New</option>
   		<option value="D">Delete</option>
   		<option value="M">Modify</option>
 		</select>
       	</p>
         
-        <p>
+        <p hidden>
              <label for="zispahandle">Hosting Company</label>        
         
 
@@ -177,15 +177,29 @@
          
         <p>
     	<label for="customerdomainowner">Domain Owner:</label>
-        <input type="text" name="domainOwner"  id="validcustomerdomainowner">
+        <input type="text" name="domainOwner"  id="validcustomerdomainowner"> e.g africom Pvt Ltd
    	   </p>
        
         <p>
     	<label for="domain_owner_org_desc">Description of domain owner's organisation:</label>
-        <textarea name="domain_owner_org_desc"  id="validdomain_owner_org_desc"></textarea>
+        <textarea name="domain_owner_org_desc"  id="validdomain_owner_org_desc"></textarea> e.g Telecommunications
         </p>
         
-         <p>
+        
+    </li>
+    <li>
+<input onclick="collapseElement('page_1'); expandElement('page_2');" type="button" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
+    </li>
+    
+    <div class="meter"><span style="width:33%">1/3</span></div>
+</ul>
+
+
+<!--Page two-->
+<ul id="page_2">
+    <li>
+    
+             <p>
         <label for="city">Domain Owner Town/City:</label>
         <select name="city" class="selectbox" id= "city" size="1">
         <option value="0" selected>Select Below </option>
@@ -216,19 +230,7 @@
         
         	
    	   </p>
-        
-    </li>
-    <li>
-<input onclick="collapseElement('page_1'); expandElement('page_2');" type="button" value="Continue" class="bclicks"/> <!--This hides the first page and shows the second page-->
-    </li>
-    
-    <div class="meter"><span style="width:33%">1/3</span></div>
-</ul>
 
-
-<!--Page two-->
-<ul id="page_2">
-    <li>
     
        <p>
         <label for="domainusage">Proposed Domain Usage:</label>
@@ -257,241 +259,65 @@
 <ul id="page_3">
     <li>
     	<p>
-    	<label for="customerphysicaladdr">Domain Owner:</label>
-        
-            <select class="selectbox" id="phy" name ="address_type_id1">
-			  <?php
-		
-			   $address_strQuery = "select address_type_id,address_type
-						            from address_type where address_type_id=1";
-			
-			   $address_rsrcResult = mysqli_query($link,$address_strQuery);
-				   			
-			   while($arrayRow= mysqli_fetch_assoc($address_rsrcResult)) {
-				  $address_strA = $arrayRow["address_type_id"];
-				  $address_strB = $arrayRow ["address_type"];
-				  echo "<option value=\"$address_strA\" selected>$address_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-             </select>	
-             
-             	   
-        
-        <textarea name="address_detail1"  id="validcustomerphysicaladdr"></textarea>
-        
+    	<label for="customerphysicaladdr">Domain Owner Physical Address:</label>
+        <textarea name="physical_address_detail"  id="validcustomerphysicaladdr"></textarea>        
     	</p>
         
         <p>
-    	<label for="customerpostaladdr">Domain Owner</label>
-         <select class="selectbox" id="pos" name ="address_type_id2">
-			  <?php
-		
-			   $address_strQuery = "select address_type_id,address_type
-						            from address_type where address_type_id=2";
-			
-			   $address_rsrcResult = mysqli_query($link,$address_strQuery);
-			
-			   while($arrayRow= mysqli_fetch_assoc($address_rsrcResult)) {
-				  $address_strA = $arrayRow["address_type_id"];
-				  $address_strB = $arrayRow["address_type"];
-				  echo "<option value=\"$address_strA\" selected >$address_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-             </select>		   
-        
-        <textarea name="address_detail2"  id="validcustomerpostaladdr"></textarea>
-       
+    	<label for="customerpostaladdr">Domain Owner Postal Address</label>
+        <textarea name="postal_address_detail"  id="validcustomerpostaladdr"></textarea>
     	</p>
         
         
         <p>
-    	<label for="customerworkphone">Domain Owner:</label>
-         <select class="selectbox" name ="contact_type_id_1">
-			  <?php
-		
-			   $contact_strQuery = "select contact_type_id,contact_type
-						            from contact_type WHERE contact_type_id=4";
-			
-			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
-			
-			   while($arrayRow= mysqli_fetch_assoc($contact_rsrcResult)) {
-				  $contact_strA = $arrayRow["contact_type_id"];
-				  $contact_strB = $arrayRow["contact_type"];
-				  echo "<option value=\"$contact_strA\" selected>$contact_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>		   
+    	<label for="customerworkphone">Domain Owner Work Phone:</label>
         <input type="tel" name="contact_detail_1" id="validworkphone">
    		</p>
         <p>
-    	<label for="customerfax">Domain Owner:</label>
-        <select class="selectbox" name ="contact_type_id_2">
-			  <?php
-		
-			   $contact_strQuery = "select contact_type_id,contact_type
-						            from contact_type WHERE contact_type_id=2";
-			
-			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
-				  $contact_strA = $arrayRow["contact_type_id"];
-				  $contact_strB = $arrayRow["contact_type"];
-				  echo "<option value=\"$contact_strA\" selected>$contact_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>		   
+    	<label for="customerfax">Domain Owner Fax Number:</label>
         <input type="tel" name="contact_detail_2"  id="validfax">
   		</p>
         
           <p>
-    	<label for="customermobilephone">Domain Owner:</label>
-        <select class="selectbox" name ="contact_type_id_3">
-			  <?php
-		
-			   $contact_strQuery = "select contact_type_id,contact_type
-						            from contact_type WHERE contact_type_id=3";
-			
-			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
-				  $contact_strA = $arrayRow["contact_type_id"];
-				  $contact_strB = $arrayRow["contact_type"];
-				  echo "<option value=\"$contact_strA\" selected>$contact_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>		   
+    	<label for="customermobilephone">Domain Owner Mobile Phone:</label>
         <input type="tel" name="contact_detail_3" id="validmobilephone">
   		</p>
         
         
         <p>
-    	<label for="customeremail">Domain Owner:</label>
-        <select class="selectbox" name ="contact_type_id_4">
-			  <?php
-		
-			   $contact_strQuery = "select contact_type_id,contact_type
-						            from contact_type WHERE contact_type_id=1";
-			
-			   $contact_rsrcResult = mysqli_query($link,$contact_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($contact_rsrcResult)) {
-				  $contact_strA = $arrayRow["contact_type_id"];
-				  $contact_strB = $arrayRow["contact_type"];
-				  echo "<option value=\"$contact_strA\" selected>$contact_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>		   
+    	<label for="customeremail">Domain Owner Email Address:</label>
         <input type="text" name="contact_detail_4" id="customeremail" >
    		</p>
         
+        <table border="0" hidden="0">
+		<tr>
+        <td><label for="primarynameserver">Primary Nameserver:</label> </td>
+          <td><label for="hostname">Host Name:</label> <input type="text" name="host_name1"  value="ns1.ai.co.zw"/></td>
+           <td><label for="ip address">IP Address:</label> <input type="text" name="ip_address_1"  value="41.221.144.2"/ ></td>
+           </tr>
         
         
-        
-        
-        
-        
-        
-          <p>
-             <select class="selectbox" name ="name_server_type_id_1">
-			  <?php
-		
-			   $nameserver_strQuery = "select name_server_type_id,name
-						            from name_server_type WHERE name_server_type_id=2";
-			
-			   $nameserver_rsrcResult = mysqli_query($link,$nameserver_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($nameserver_rsrcResult)) {
-				  $nameserver_strA = $arrayRow["name_server_type_id"];
-				  $nameserver_strB = $arrayRow["name"];
-				  echo "<option value=\"$nameserver_strA\" selected>$nameserver_strB</option>\n";
-			  }	
-			  			  
-					  
-		     ?>	             
-           </select>
-          <label for="hostname">Host Name:</label> <input type="text" name="hostname_1"  value="ns1.ai.co.zw"/>
-           <label for="ip address">IP Address:</label> <input type="text" name="ip_address_1"  value="41.221.144.2"/ >
-   		</p>
-        <p>
-        
-        <select class="selectbox" name ="name_server_type_id_2">
-			  <?php
-		
-			   $nameserver_strQuery = "select name_server_type_id,name
-						            from name_server_type WHERE name_server_type_id=1";
-			
-			   $nameserver_rsrcResult = mysqli_query($link,$nameserver_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($nameserver_rsrcResult)) {
-				  $nameserver_strA = $arrayRow["name_server_type_id"];
-				  $nameserver_strB = $arrayRow["name"];
-				  echo "<option value=\"$nameserver_strA\" selected>$nameserver_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>		   
-       <label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_2"  value="ns2.ai.co.zw"/>
-       <label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_2" id="ipaddress" value="41.221.144.3"/ >
+        <tr>
+       <td><label for="secondarynameserver">Secondary Nameserver:</label> </td>
+       <td><label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_2"  value="ns2.ai.co.zw"/></td>
+       <td><label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_2" id="ipaddress" value="41.221.144.3"/ ></td>
+</tr>
 
 
-</p>
-<p>        
-        
-        <select class="selectbox" name ="name_server_type_id_2">
-			  <?php
-		
-			   $nameservertype_strQuery = "select name_server_type_id,name
-						            from name_server_type WHERE name_server_type_id=1";
-			
-			   $nameservertype_rsrcResult = mysqli_query($link,$nameservertype_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($nameservertype_rsrcResult)) {
-				  $nameservertype_strA = $arrayRow["name_server_type_id"];
-				  $nameservertype_strB = $arrayRow["name"];
-				  echo "<option value=\"$nameservertype_strA\" selected>$nameservertype_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>
-          
-         		   
-       <label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_3"  value="ns3.ai.co.zw"/>
-       <label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_3"  value="41.73.47.133"/ >
+       <tr>
+        <td><label for="secondarynameserver">Secondary Nameserver:</label></td> 
+       <td><label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_3"  value="ns3.ai.co.zw"/></td>
+       <td><label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_3"  value="41.73.47.133"/ ></td>
+      </tr>
+<tr>
 
-   		</p>
-        
-        <p>
-        
-        
-         <select class="selectbox" name ="name_server_type_id_2">
-			  <?php
-		
-			   $nameserver_strQuery = "select name_server_type_id,name
-						            from name_server_type WHERE name_server_type_id=1";
-			
-			   $nameserver_rsrcResult = mysqli_query($link,$nameserver_strQuery);
-			
-			   while($arrayRow = mysqli_fetch_assoc($nameserver_rsrcResult)) {
-				  $nameserver_strA = $arrayRow["name_server_type_id"];
-				  $nameserver_strB = $arrayRow["name"];
-				  echo "<option value=\"$nameserver_strA\" selected>$nameserver_strB</option>\n";
-			  }				  
-					  
-		     ?>	             
-           </select>		   
-       <label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_4" id="hostname" value="ns4.ai.co.zw"/>
-       <label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_4"  value="41.221.159.50"/ >
- 
-   		</p>
-
-        
+      <td> <label for="secondarynameserver">Secondary Nameserver:</label> </td>
+      <td><label for="hostname">Host Name:</label> <input type="text" name="sec_hostname_4" id="hostname" value="ns4.ai.co.zw"/></td>
+       <td><label for="ip address">IP Address:</label> <input type="text" name="sec_ip_address_4"  value="41.221.159.50"/ ></td>
        
+ 
+  </tr>
+       </table>
             
      </li>   	
    <li>
