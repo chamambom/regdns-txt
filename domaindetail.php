@@ -33,7 +33,7 @@ if((mysqli_num_rows($result)) >0){
 
 	   echo"<h4> Below are the details you entered for domain ". $row['domain_name'] ." with domain Owner ". $row['domainOwner'] ." </h4>";	
 	   
-	   echo"<div id='full_template'>";
+	   echo"<div class='full_template'>";
 	   echo "<div id='field-widget_x'><a href='templateX.php'> Generate template and attach associated documents</a></div>";
 	   
  
@@ -174,6 +174,38 @@ $_SESSION['domain_name'] = $full_domain_name;
 $domain_status=$row['domstatus'];
 $_SESSION['domstatus'] = $domain_status;
 
+$domain_owner=$row['domainOwner'];
+$_SESSION['domainOwner'] = $domain_owner;
+
+$domain_owner_org_name=$row['domain_owner_org_name'];
+$_SESSION['domain_owner_org_name'] = $domain_owner_org_name;
+
+$physical_address_detail=$row['physical_address_detail'];
+$_SESSION['physical_address_detail'] = $physical_address_detail;
+
+$postal_address_detail=$row['postal_address_detail'];
+$_SESSION['postal_address_detail'] = $postal_address_detail;
+
+$domain_owner_city=$row['city'];
+$_SESSION['city'] = $domain_owner_city;
+
+$domain_owner_country_name=$row['name'];
+$_SESSION['name'] = $domain_owner_country_name;
+
+$domain_owner_voice_phone=$row['voicephone'];
+$_SESSION['voicephone'] = $domain_owner_voice_phone;
+
+$domain_owner_faxnumber=$row['faxnumber'];
+$_SESSION['faxnumber'] = $domain_owner_faxnumber;
+
+$domain_owner_emailaddress=$row['emailaddress'];
+$_SESSION['emailaddress'] = $domain_owner_emailaddress;
+
+$domain_owner_org_desc=$row['domain_owner_org_desc'];
+$_SESSION['domain_owner_org_desc'] = $domain_owner_org_desc;
+
+$domain_usage=$row['domain_usage'];
+$_SESSION['domain_usage'] = $domain_usage;
 
 }  //end while
 
