@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="css/mail.css"/>
+<link rel="stylesheet" type="text/css" href="css/domtables.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
 <?php
 /**
 * Simple example script using PHPMailer with exceptions enabled
@@ -58,7 +62,11 @@ try {
                          $_FILES['image']['name']);
 	$mail->IsHTML(true); // send as HTML
 	$mail->Send();
-	echo 'Message has been sent.';
+	
+	echo"<div class='full_template'>";
+	echo 'Your Message has been sent.';
+	
+	echo "</div>";
 } catch (phpmailerException $e) {
 	echo $e->errorMessage();
 }
