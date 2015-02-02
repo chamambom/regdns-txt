@@ -181,18 +181,12 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 				</td>
 			 </tr>
 			 <tr>
-			    <td class="label"> From E-mail : </td>
-				<td><input type="email" id="femail" name="femail" class="form-input" placeholder='From E-Mail'/>
-				   <div id="invalid-femail" class="error_msg"></div>
+			    <td class="label"> Subject : </td>
+				<td><input type="text" id="subject" name="subject" class="form-input" placeholder='e.g New:africom.co.zw'/>
+				   <div id="invalid-subject" class="error_msg"></div>
 				</td>
 			 </tr>
 			 
-			 <tr>
-			    <td class="label"> Phone : </td>
-				<td><input type="tel" id="phone" name="phone" class="form-input" placeholder='Phone'/>
-				   <div id="invalid-phone" class="error_msg"></div>
-				</td>
-			 </tr>
 			 <tr>
 			    <td class="label"> Image : </td>
 				<td><input type="file" id="image" name="image" class="form-input" placeholder='Image'> <div id="invalid-image" class="error_msg"></div></td>
@@ -229,15 +223,14 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   required: true,
 					   minlength : 3,
 					},
+					subject: {
+					   required: true,
+					   minlength : 3,
+					},
+
 					email:{ 
 					   required: true,
 					   email: true,
-					},
-					phone: { 
-					  required : true,
-					  number:true,	
-					  minlength : 10,
-				      maxlength : 11
 					},
 					image: "required",
 					message: "required",
@@ -251,19 +244,15 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   required:"Please enter your name",
 					   minlength: "Please enter a valid name",
 					},
+					
 					email:{ 
 					   required: "Please enter your email",
 					   minlength: "Please enter a valid email address",
 					},
-					phone: { 
-					   required: "Please enter your phone number",
-					   minlength: "Please enter your valid phone number",
-					   maxlength: "Please enter your valid phone number"
-					},
 					image: "Please Choose your image",
 					message: "Please enter your message",
-					femail: { 
-					   required: "Please enter your email",
+					subject: { 
+					   required: "Please enter your subject",
 					   minlength: "Please enter a valid email address",
 					}
 				}

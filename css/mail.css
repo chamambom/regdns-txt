@@ -5,7 +5,7 @@
 
 .mail{
   width: 50%;
-  margin:0 auto; 
+  margin:0 auto;
 }
 #image{
 
@@ -30,12 +30,12 @@ height: 30px;
   margin-left: 140px;
   width: 280px;
   height: 45px;
-  border-radius: 5px;
+  border-radius: 4px;
   color: #fff;
-  background-color: #EE872A;
+  background-color: #ccc;
   font: bold 15px Verdana;
   margin-bottom: 100px;
-  border: 2px solid #EE872A;
+    border:1px solid #0C0;
 }
 
 em.error {

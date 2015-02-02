@@ -12,17 +12,15 @@ try {
 
     $to = $_POST['email'];
 	$mail->AddAddress($to);
-	$mail->From       = $_POST['femail'];
+    $mail->Subject    = $_POST['subject'];
+	$mail->From       = "dns-admin@africominternet.co.zw";
     $mail->FromName   = $_POST['name'];
-	$mail->Subject  = "Test Email using PHP";
+	
 	
 	
 
 	$body             = "<table>
-	                         <tr>
-							    <th colspan='2'>This Sample Mail</th>
-							 </tr>
-							 
+						 
 							 <tr>
 							    <td style='font-weight:bold'>Name :</td>
 								<td>".$_POST['name']."</td>
@@ -33,12 +31,7 @@ try {
 							  <td>".$_POST['email']."</td>
 							</tr>
 
-							<tr>
-							  <td style='font-weight:bold'>Phone : </td>
-							  <td>".$_POST['phone']."</td>
-							</tr>
-
-							<tr>
+						<tr>
 							  <td style='font-weight:bold'>Message : </td>
 							  <td>".$_POST['message']."</td>
 							</tr>
@@ -55,7 +48,7 @@ try {
 	//$mail->Password   = "password";            // SMTP server password
 
 	$mail->IsSendmail();  // tell the class to use Sendmail
-	$mail->AddReplyTo("admin@smarttutorials.net");
+	$mail->AddReplyTo("smc@afri-com.net");
 	$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	$mail->WordWrap   = 80; // set word wrap
 	

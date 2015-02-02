@@ -70,12 +70,12 @@ h5{
 color:#999;
 background-color:#8DC73F;
 text-align:center;
-width:83.8%;
-height:12px;
+width:84%;
+height:18px;
 margin: 5px auto;
 padding:8px;
 border-radius:4px;
-border:1px solid #999;
+border:0px solid #ccc;
 	
 	}
 	
@@ -106,13 +106,17 @@ th.nobg {
 
 td {
 	border-bottom: 1px solid #C1DAD7;
-	border-right: 1px solid #C1DAD7;
+	border-left: 1px solid #C1DAD7;
 	border-top: 1px solid #C1DAD7;
 	background: #fff;
 	padding: 6px 6px 6px 12px;
 	color: #4f6b72;
 }
 
+#mailForm td{
+		border-right: 1px solid #C1DAD7;
+
+	}
 
 td.alt {
 	background: #F5FAFA;
