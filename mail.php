@@ -13,12 +13,13 @@ require 'class.phpmailer.php';
 
 try {
     $mail = new PHPMailer(true); //New instance, with exceptions enabled
-
+     
+	$registrant= $_POST['name']; 
     $to = $_POST['email'];
 	$mail->AddAddress($to);
     $mail->Subject    = $_POST['subject'];
 	$mail->From       = "dns-admin@africominternet.co.zw";
-    $mail->FromName   = $_POST['name'];
+    $mail->FromName  = "Africom DNS Administrator";
 	
 	
 	
@@ -63,7 +64,7 @@ try {
 	$mail->IsHTML(true); // send as HTML
 	$mail->Send();
 	
-	echo"<h4> Thank you very much  ".$_POST['name']." for sending $full_domain_name to ZISPA, Check your email  " .$mail->From  ."  </h4>";	
+	echo"<h4> Thank you very much  $registrant for sending $full_domain_name to ZISPA, Check your email  " .$mail->From  ." for feedback  </h4>";	
 		
 	echo"<div class='full_template'>";
 	echo 'Your Message has been sent.';
