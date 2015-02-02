@@ -77,7 +77,7 @@ border-radius:4px;
     float:left;
     padding:3px;
 }
-input[type=text], input[type=tel] ,input[type=email] {
+input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
     height:20px; 
     width:220px; 
     padding:5px 8px;

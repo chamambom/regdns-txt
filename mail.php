@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <link rel="stylesheet" href="css/mail.css"/>
 <link rel="stylesheet" type="text/css" href="css/domtables.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -10,6 +12,8 @@
 */
 
 require 'class.phpmailer.php';
+
+$full_domain_name = $_SESSION['domain_name'];
 
 try {
     $mail = new PHPMailer(true); //New instance, with exceptions enabled
