@@ -28,9 +28,8 @@ try {
 						 <tr>
 							  <td>Please ".$_POST['message']."</td>
 						</tr>
-							<tr>
-							  <td></td>
-							  <td></td>
+							<tr<td></td> </tr>
+							  <tr>
 							  <td>Regards,</td> 							  
 							</tr>
 							
