@@ -147,6 +147,7 @@ $domain_owner_org_desc=$_SESSION['domain_owner_org_desc'];
 $domain_usage=$_SESSION['domain_usage'];
 
 
+
 $downloadFileName = ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $domain_owner_org_name,$physical_address_detail, $postal_address_detail, $domain_owner_city, $domain_owner_country_name, $domain_owner_voice_phone, $domain_owner_faxnumber, $domain_owner_emailaddress,$domain_owner_org_desc,$domain_usage);
 
 echo"<h4> Please attach associated documents for domain $full_domain_name with domain Owner $domain_owner before sending to ZISPA </h4>";	
@@ -170,28 +171,33 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 	    <table border="0">
 		     <tr>
 			    <td class="label"> Your Name Please : </td>
-				<td><input type="text" id="name" name="name" class="form-input" placeholder='User Name'/>
+				<td><input type="text" id="name" name="name"  placeholder='User Name'/>
 				  <div id="invalid-name" class="error_msg"></div>
 				</td>
 			 </tr>
 			 <tr>
 			    <td class="label"> to - E-mail : </td>
-				<td><input type="email" id="email" name="email" class="form-input" placeholder='admin@zispa.org.zw'/>
+				<td><input type="email" id="email" name="email"  placeholder='admin@zispa.org.zw'/>
 				   <div id="invalid-email" class="error_msg"></div>
 				</td>
 			 </tr>
 			 <tr>
 			    <td class="label"> Subject : </td>
-				<td><input type="text" id="subject" name="subject" class="form-input" placeholder='e.g New:africom.co.zw'/>
+				<td><input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'/>
 				   <div id="invalid-subject" class="error_msg"></div>
 				</td>
 			 </tr>
 			 
 			 <tr>
 			    <td class="label"> Image : </td>
-				<td><input type="file" id="image" name="image" class="form-input" placeholder='Image'> <div id="invalid-image" class="error_msg"></div></td>
-				
+				<td><input type="file" id="image" name="image"  placeholder='Image'> <div id="invalid-image" class="error_msg"></div></td>
 			 </tr>
+             
+             <tr>
+			    <td class="label"> Attached-Template-file: </td>
+				<td><input type="file" id="templatex" name="templatex"  value="<?php echo $downloadFileName; ?>"> <div id="invalid-templatex" class="error_msg"></div></td>
+			 </tr>
+
 			 
 			 <tr>
 			    <td class="label"> Message : </td>
@@ -223,6 +229,10 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   required: true,
 					   minlength : 3,
 					},
+					
+					templatex: "required",
+
+
 					subject: {
 					   required: true,
 					   minlength : 3,
@@ -234,10 +244,6 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					},
 					image: "required",
 					message: "required",
-					femail:{ 
-					   required: true,
-					   email: true,
-					}
 				},
 				messages: {
 					name: {
@@ -251,6 +257,7 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					},
 					image: "Please Choose your image",
 					message: "Please enter your message",
+					templatex: "Please Choose your template",
 					subject: { 
 					   required: "Please enter your subject",
 					   minlength: "Please enter a valid email address",

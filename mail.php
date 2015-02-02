@@ -14,10 +14,15 @@
 require 'class.phpmailer.php';
 
 $full_domain_name = $_SESSION['domain_name'];
+$downloadFileName=$_SESSION['downloadFileName'];
+
+echo "$downloadFileName";
 
 try {
     $mail = new PHPMailer(true); //New instance, with exceptions enabled
      
+	//$files = array("file1.pdf","file2.pdf");
+	
 	$registrant= $_POST['name']; 
     $to = $_POST['email'];
 	$mail->AddAddress($to);
@@ -48,6 +53,25 @@ try {
 	                     <table>";
 						 
 	$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
+	
+	
+	
+	
+	// preparing attachments
+    //for ($x = 0; $x < count($files); $x++) {
+//        $file = fopen($files[$x], "rb");
+//        $data = fread($file, filesize($files[$x]));
+//        fclose($file);
+//        $data = chunk_split(base64_encode($data));
+//        $message .= "Content-Type: {\"application/octet-stream\"};\n" . " name=\"$files[$x]\"\n" .
+//            "Content-Disposition: attachment;\n" . " filename=\"$files[$x]\"\n" .
+//            "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+//        $message .= "--{$mime_boundary}\n";
+//    }
+
+
+	
+	
 	$mail->MsgHTML($body);
 	
 
@@ -65,8 +89,15 @@ try {
 	
 	$mail->AddAttachment($_FILES['image']['tmp_name'],
                          $_FILES['image']['name']);
+	
+/*	$mail->AddAttachment($_FILES['templatex']['tmp_name'],
+                         $_FILES['templatex']['name']);
+*/
 	$mail->IsHTML(true); // send as HTML
 	$mail->Send();
+	
+	
+	
 	
 	echo"<h4> Thank you very much  $registrant for sending $full_domain_name to ZISPA, Check your email  " .$mail->From  ." for feedback  </h4>";	
 		
