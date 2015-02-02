@@ -63,7 +63,7 @@ try {
 	$mail->IsHTML(true); // send as HTML
 	$mail->Send();
 	
-	echo"<h4> Thank you very much  ".$_POST['name']." for sending $full_domain_name to ZISPA </h4>";	
+	echo"<h4> Thank you very much  ".$_POST['name']." for sending $full_domain_name to ZISPA, Check your email  " .$mail->From  ."  </h4>";	
 		
 	echo"<div class='full_template'>";
 	echo 'Your Message has been sent.';
