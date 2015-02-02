@@ -24,16 +24,17 @@ try {
 	                      <tr>
 							  <td>  Good day</td>
 							</tr>
+							<p></p>
 						 <tr>
-							  <td>".$_POST['message']."</td>
+							  <td>Please ".$_POST['message']."</td>
 							</tr>
-							
+							<p></p>
 					        <tr>
 							  <td>Regards,  Africom DNS Administrator </td>
 							</tr>
-
 							
 	                     <table>";
+						 
 	$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
 	$mail->MsgHTML($body);
 	
