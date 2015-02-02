@@ -63,11 +63,17 @@ try {
 	$mail->IsHTML(true); // send as HTML
 	$mail->Send();
 	
+	echo"<h4> Thank you very much  ".$_POST['name']." for sending $full_domain_name to ZISPA </h4>";	
+		
 	echo"<div class='full_template'>";
 	echo 'Your Message has been sent.';
 	
-	echo "</div>";
+
 } catch (phpmailerException $e) {
 	echo $e->errorMessage();
 }
+echo "</div>";
+
+echo "<h5>Courtesy of the Service Management Center (SMC) Africom@2015</h5>";
+
 ?>
