@@ -146,6 +146,9 @@ $domain_owner_emailaddress=$_SESSION['emailaddress'];
 $domain_owner_org_desc=$_SESSION['domain_owner_org_desc'];
 $domain_usage=$_SESSION['domain_usage'];
 
+
+$_SESSION['downloadFileName'] = $downloadFileName;
+
 $downloadFileName=$_SESSION['downloadFileName'];
 
 $downloadFileName = ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $domain_owner_org_name,$physical_address_detail, $postal_address_detail, $domain_owner_city, $domain_owner_country_name, $domain_owner_voice_phone, $domain_owner_faxnumber, $domain_owner_emailaddress,$domain_owner_org_desc,$domain_usage);
