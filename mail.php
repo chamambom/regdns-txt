@@ -20,19 +20,7 @@ try {
 	
 
 	$body             = "<table>
-						 
-							 <tr>
-							    <td style='font-weight:bold'>Name :</td>
-								<td>".$_POST['name']."</td>
-							 </tr>
-							 
-							 <tr>
-							  <td style='font-weight:bold'>E-mail : </td>
-							  <td>".$_POST['email']."</td>
-							</tr>
-
-						<tr>
-							  <td style='font-weight:bold'>Message : </td>
+						 <tr>
 							  <td>".$_POST['message']."</td>
 							</tr>
 	                     <table>";

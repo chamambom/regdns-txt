@@ -169,14 +169,14 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
 	    <table border="0">
 		     <tr>
-			    <td class="label"> Name : </td>
+			    <td class="label"> Your Name Please : </td>
 				<td><input type="text" id="name" name="name" class="form-input" placeholder='User Name'/>
 				  <div id="invalid-name" class="error_msg"></div>
 				</td>
 			 </tr>
 			 <tr>
-			    <td class="label"> E-mail : </td>
-				<td><input type="email" id="email" name="email" class="form-input" placeholder='E-Mail'/>
+			    <td class="label"> to - E-mail : </td>
+				<td><input type="email" id="email" name="email" class="form-input" placeholder='admin@zispa.org.zw'/>
 				   <div id="invalid-email" class="error_msg"></div>
 				</td>
 			 </tr>
