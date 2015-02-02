@@ -14,9 +14,11 @@
 require 'class.phpmailer.php';
 
 $full_domain_name = $_SESSION['domain_name'];
+
 $downloadFileName=$_SESSION['downloadFileName'];
 
-echo $downloadFileName ;
+//echo $downloadFileName ;
+echo "<a href='./{$downloadFileName}'>View Template</a>";
 
 try {
     $mail = new PHPMailer(true); //New instance, with exceptions enabled
