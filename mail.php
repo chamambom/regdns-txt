@@ -29,7 +29,9 @@ try {
 							  <td>Please ".$_POST['message']."</td>
 							</tr>
 							<tr>
-							  <td>Regards,  Africom DNS Administrator </td>
+							  <td>Regards, </td>  
+							  
+							  <td>Africom DNS Administrator </td>
 							</tr>
 							
 	                     <table>";
