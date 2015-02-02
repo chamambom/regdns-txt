@@ -24,12 +24,11 @@ try {
 	                      <tr>
 							  <td>  Good day</td>
 							</tr>
-							<p></p>
+							<tr><td></td></tr>
 						 <tr>
 							  <td>Please ".$_POST['message']."</td>
 							</tr>
-							<p></p>
-					        <tr>
+							<tr>
 							  <td>Regards,  Africom DNS Administrator </td>
 							</tr>
 							
