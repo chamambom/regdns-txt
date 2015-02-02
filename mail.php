@@ -20,9 +20,19 @@ try {
 	
 
 	$body             = "<table>
+	
+	                      <tr>
+							  <td>  Good day</td>
+							</tr>
 						 <tr>
 							  <td>".$_POST['message']."</td>
 							</tr>
+							
+					        <tr>
+							  <td>Regards,  Africom DNS Administrator </td>
+							</tr>
+
+							
 	                     <table>";
 	$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
 	$mail->MsgHTML($body);
