@@ -40,18 +40,18 @@
       0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003
 
       1.  DOMAIN NAME and ACTION
-      1a. Full domain name......................: adsads.co.zw
+      1a. Full domain name......................: maleymarketingzim.co.zw
       1b. (N)ew or (M)odify or (D)elete.(N/M/D).: N
 
       2.  DOMAIN OWNER
-      2a. Domain Owner..........: bnbb
-      2b. Organisation Name.....: zxczcx
-      2c. Physical Address......: zxczxccxz
-      2d. Postal Address .......: zxczxc
+      2a. Domain Owner..........: martin
+      2b. Organisation Name.....: BB
+      2c. Physical Address......: w120 charingira flasts
+      2d. Postal Address .......: W120 sdf dsf
       2e. Town/City.............: Harare
       2f. Country...............: Zimbabwe
-      2g. Voice Phone...........: 13212132
-      2h. Fax Number............: 132312
+      2g. Voice Phone...........: 23423
+      2h. Fax Number............: 234234
       2i. E-mail Address........: chamambom@gmail.com
 	  
       3.  ADMIN/BILLING CONTACT
@@ -67,8 +67,8 @@
       3j. E-mail Address........: smc@afri-com.net
    
       4.  DESCRIPTION OF ORGANISATION/DOMAIN
-      4a. Description of domain owner's organisation..: zcxzxcxz
-      4b. Proposed domain usage.: zxczxc
+      4a. Description of domain owner's organisation..: webhosting company
+      4b. Proposed domain usage.: email hosting
 
       5.  TECHNICAL CONTACT
       5a. ZISPA Handle..........: Africom
@@ -106,4 +106,4 @@
       following street address
       (Note: Post Office box or
       Post Office bag addresses
-      are not acceptable).......: zxczxccxz
+      are not acceptable).......: w120 charingira flasts
