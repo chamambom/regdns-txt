@@ -26,6 +26,7 @@ try {
 	//$files = array("file1.pdf","file2.pdf");
 	
 	$registrant= $_POST['name']; 
+	$templatex = $_POST['templatex']; 
     $to = $_POST['email'];
 	$mail->AddAddress($to);
     $mail->Subject    = $_POST['subject'];
@@ -70,6 +71,8 @@ try {
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 0; // set word wrap	
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
+	$mail->AddAttachment($_FILES['templatex']['tmp_name_1'], $_FILES['templatex']['name_1']);
+
     $mail->AddAttachment($downloadFileName,$downloadFileName);	
 	
 	$mail->IsHTML(true); // send as HTML
