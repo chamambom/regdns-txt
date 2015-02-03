@@ -167,7 +167,6 @@ echo"<h4> Please attach associated documents for domain $full_domain_name with d
 
 echo"<div class='full_template'>";
 echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a href='./{$downloadFileName}'>View Template</a>";
-$file = 'monkey.gif';
 
 /*if (file_exists($downloadFileName)) {
     header('Content-Description: File Transfer');
