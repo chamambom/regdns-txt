@@ -57,7 +57,7 @@ class PHPMailer {
    * Sets the CharSet of the message.
    * @var string
    */
-  public $CharSet           = 'utf-8';
+  public $CharSet           = 'UTF-8';
   
   
 
@@ -72,7 +72,7 @@ class PHPMailer {
    *  "8bit", "7bit", "binary", "base64", and "quoted-printable".
    * @var string
    */
-  public $Encoding          = 'base64';
+  public $Encoding          = '7bit';
 
   /**
    * Holds the most recent mailer error message.
