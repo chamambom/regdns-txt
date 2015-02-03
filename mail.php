@@ -26,7 +26,6 @@ try {
 	//$files = array("file1.pdf","file2.pdf");
 	
 	$registrant= $_POST['name']; 
-	$templatex = $_POST['templatex']; 
     $to = $_POST['email'];
 	$mail->AddAddress($to);
     $mail->Subject    = $_POST['subject'];
