@@ -340,7 +340,7 @@ class PHPMailer {
    *        it must be used via self::CRLF
    * @var string
    */
-  public $LE              = "\n";
+  public $LE              = "\r\n";
 
    /**
    * Used with DKIM Signing
