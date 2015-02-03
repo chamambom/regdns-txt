@@ -214,11 +214,11 @@ $file = 'monkey.gif';
 				<td><input type="file" id="image" name="image"  placeholder='Image'> <div id="invalid-image" class="error_msg"></div></td>
 			 </tr>
              
-             <tr>
+<!--             <tr>
 			    <td class="label"> Attached-Template-file: </td>
 				<td><input type="file" id="templatex" name="templatex"> <div id="invalid-templatex" class="error_msg"></div></td>
 			 </tr>
-
+-->
 			 
 			 <tr>
 			    <td class="label"> Message : </td>
