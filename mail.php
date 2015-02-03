@@ -70,7 +70,7 @@ try {
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 80; // set word wrap	
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
-	$encoding = 'base64';
+	$encoding = 'utf-8';
     $mail->AddAttachment($downloadFileName,$encoding);	
 	
 	$mail->IsHTML(false); // send as HTML
