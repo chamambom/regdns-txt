@@ -57,7 +57,7 @@ try {
 	$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
 	
 	$mail->MsgHTML($body);
-    $mail->ContentType = 'text/plain'; 
+    $mail->ContentType = 'Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes'; 
 
 	
 
