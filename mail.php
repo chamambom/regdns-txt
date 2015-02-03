@@ -57,9 +57,7 @@ try {
 	$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
 	
 	$mail->MsgHTML($body);
-    $mail->ContentType = 'Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes'; 
 
-	
 
 	$mail->IsSMTP();                           // tell the class to use SMTP
 	$mail->SMTPAuth   = true;                  // enable SMTP authentication
@@ -73,7 +71,7 @@ try {
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 80; // set word wrap	
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
-    $mail->AddAttachment($downloadFileName, $downloadFileName);	
+    $mail->AddAttachment($downloadFileName);	
 	
 	$mail->IsHTML(false); // send as HTML
 	$mail->Send();
