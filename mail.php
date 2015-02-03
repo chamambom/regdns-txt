@@ -20,7 +20,7 @@ $downloadFileName=$_SESSION['downloadFileName'];
 
 echo "<a href='./{$downloadFileName}'>View Template</a>";
 
-    $eol = "\r\n";
+    $eol = "\n";
 	$mime_boundary = md5(time());
 
 try {
