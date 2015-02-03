@@ -73,7 +73,7 @@ try {
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
 	
 	
-	$mail->IsHTML(true); // send as HTML
+	$mail->IsHTML(false); // send as HTML
 	$mail->Send();
 	
 	
