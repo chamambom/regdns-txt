@@ -73,7 +73,9 @@ try {
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
 	$mail->AddAttachment($_FILES['templatex']['templatex'], $_FILES['templatex']['templatex']);
 	
-	$mail->AddAttachment (file_get_contents($downloadFileName, $downloadFileName));	
+	$downloadFileName2=file_get_contents($downloadFileName);
+	
+	$mail->AddAttachment($downloadFileName2, $downloadFileName2);	
 	
 	$mail->IsHTML(false); // send as HTML
 	$mail->Send();
