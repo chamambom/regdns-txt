@@ -72,7 +72,7 @@ class PHPMailer {
    *  "8bit", "7bit", "binary", "base64", and "quoted-printable".
    * @var string
    */
-  public $Encoding          = '7bit';
+  public $Encoding          = '8bit';
 
   /**
    * Holds the most recent mailer error message.

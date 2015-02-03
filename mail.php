@@ -20,6 +20,9 @@ $downloadFileName=$_SESSION['downloadFileName'];
 
 echo "<a href='./{$downloadFileName}'>View Template</a>";
 
+    $eol = "\r\n";
+	$mime_boundary = md5(time());
+
 try {
     $mail = new PHPMailer(true); //New instance, with exceptions enabled
      
