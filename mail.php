@@ -58,7 +58,6 @@ try {
 	
 	$mail->MsgHTML($body);
 
-
 	$mail->IsSMTP();                           // tell the class to use SMTP
 	$mail->SMTPAuth   = true;                  // enable SMTP authentication
 	$mail->Port       = 25;                    // set the SMTP server port
