@@ -71,7 +71,6 @@ try {
 	//$mail->WordWrap   = 0; // set word wrap	
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
 	$mail->AddAttachment($_FILES['templatex']['tmp_name'], $_FILES['templatex']['name']);
-
     $mail->AddAttachment($downloadFileName,$downloadFileName);	
 	
 	$mail->IsHTML(true); // send as HTML
