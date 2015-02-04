@@ -70,7 +70,6 @@ try {
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 0; // set word wrap	
 	$mail->AddAttachment($_FILES['image']['tmp_name'], $_FILES['image']['name']);
-	$mail->AddAttachment($_FILES['templatex']['tmp_name'], $_FILES['templatex']['name']);
     $mail->AddAttachment($downloadFileName,$downloadFileName);	
 	
 	$mail->IsHTML(true); // send as HTML
@@ -90,6 +89,6 @@ try {
 }
 echo "</div>";
 
-echo "<h5>Courtesy of a Service Management Engineer @2015</h5>";
+echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
 
 ?>

@@ -165,7 +165,7 @@ echo "<div class='headings'>6.  PRIMARY NAMESERVER</div> " ;
 	
 		
 		
-echo "<h5>Courtesy of a Service Management Engineer @2015</h5>";
+echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
 	 
 
 $full_domain_name=$row['domain_name'];

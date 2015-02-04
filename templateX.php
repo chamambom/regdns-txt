@@ -212,16 +212,11 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 			    <td class="label"> Image : </td>
 				<td><input type="file" id="image" name="image"  placeholder='Image'> <div id="invalid-image" class="error_msg"></div></td>
 			 </tr>
-             
-             <tr>
-			    <td class="label"> Attached-Template-file: </td>
-				<td><input type="file" id="templatex" name="templatex"> <div id="invalid-templatex" class="error_msg"></div></td>
-			 </tr>
-
 			 
 			 <tr>
 			    <td class="label"> Message : </td>
-				<td><textarea name="message" placeholder='Message' ></textarea>
+				<td><textarea name="message" ></textarea>  Domains sent to ZISPA can only be Modified (M) Deleted (D) or Registered (N) 
+                											
 
                 
                 <span id="invalid-message" class="error_msg"></span></td>
@@ -250,10 +245,7 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   minlength : 3,
 					},
 					
-					templatex: "required",
-
-
-					subject: {
+         				subject: {
 					   required: true,
 					   minlength : 3,
 					},
@@ -275,9 +267,9 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   required: "Please enter your email",
 					   minlength: "Please enter a valid email address",
 					},
-					image: "Please Choose your image",
+				
+				    image: "Please Choose your image",
 					message: "Please enter your message",
-					templatex: "Please Choose your template",
 					subject: { 
 					   required: "Please enter your subject",
 					   minlength: "Please enter a valid email address",
@@ -294,7 +286,7 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 <?php
 echo "</div>" ;
 
-echo "<h5>Courtesy of a Service Management Engineer @2015</h5>";
+echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
 
 
 

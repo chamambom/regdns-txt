@@ -46,7 +46,7 @@ if(mysqli_num_rows($myresult1)>0)
 			echo"<p id='thankyou' >Your Database Currently Holds No One with this domain $domain_name</p>";
 			}
 			
-echo "<h5>Courtesy of a Service Management Engineer @2015</h5>";
+echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
 
 			
 mysqli_free_result($myresult1);
