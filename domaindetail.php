@@ -34,7 +34,7 @@ if((mysqli_num_rows($result)) >0){
 	   echo"<h4> Below are the details you entered for domain ". $row['domain_name'] ." with domain Owner ". $row['domainOwner'] ." </h4>";	
 	   
 	   echo"<div class='full_template'>";
-	   echo "<div id='field-widget_x'><a href='templateX.php'> Generate template and attach associated documents</a></div>";
+	   echo "<div class='field_widget_x'><a href='templateX.php'> Generate template and attach associated documents</a></div>";
 	   
  
 	   echo "<div class='headings'> 0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003 </div>";

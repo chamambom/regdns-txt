@@ -166,71 +166,70 @@ echo"<h4> Please attach associated documents for domain $full_domain_name with d
 <?php 
 
 echo"<div class='full_template'>";
-echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a href='./{$downloadFileName}'>View Template</a>";
+echo"<div class='field_widget_z'>The Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa , if its a NEW domain then dont attach any documents but if you are MODIFYING a domain (a domain that is being transfered to Africom) ,please attach the release letter using the form below </div>";
 
-/*if (file_exists($downloadFileName)) {
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename='.basename($downloadFileName));
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    header('Content-Length: ' . filesize($downloadFileName));
-    readfile($downloadFileName);
-    exit;
-}*/
+/* "<a href='./{$downloadFileName}'>View Template</a>          
 
-
-
-
+the line above was for me to see if the template is being passed from the previous page
+*/
 ?>
 
-<div class="title">Attach Supportin Docs Here</div>
+<div class="title">Attach Supporting Documents Here</div>
 	<div class="mail">
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
 	    <table border="0">
 		     <tr>
-			    <td class="label"> Your Name Please : </td>
-				<td><input type="text" id="name" name="name"  placeholder='User Name'/>
-				  <div id="invalid-name" class="error_msg"></div>
+			    <td class="mail_input_labels"> Your Name Please : </td>
+				<td ><input type="text" id="name" name="name"  placeholder='User Name' />
+				  <span id="invalid-name" class="error_msg"></span>
+                  We only need it for records purposes
 				</td>
 			 </tr>
 			 <tr>
-			    <td class="label"> to - E-mail : </td>
-				<td><input type="email" id="email" name="email"  placeholder='admin@zispa.org.zw'/>
-				   <div id="invalid-email" class="error_msg"></div>
+			    <td class="mail_input_labels"> to - E-mail : </td>
+				<td ><input type="email" id="email" name="email"  placeholder='smc@afri-com.net'/>
+				   <span id="invalid-email" class="error_msg"></span>
 				</td>
 			 </tr>
 			 <tr>
-			    <td class="label"> Subject : </td>
-				<td><input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'/>
-				   <div id="invalid-subject" class="error_msg"></div>
+			    <td class="mail_input_labels"> Subject : </td>
+				<td ><input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'/>
+                    <span id="invalid-subject" class="error_msg"></span>
+                	(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here
+				   
 				</td>
 			 </tr>
 			 
 			 <tr>
-			    <td class="label"> Image : </td>
-				<td><input type="file" id="image" name="image"  placeholder='Image'> <div id="invalid-image" class="error_msg"></div></td>
-			 </tr>
+			    <td class="mail_input_labels"> Release Letter : </td>
+				<td ><input type="file" id="letter" name="letter"  placeholder='Release Letter'/> <span id="invalid-letter" class="error_msg"></span>
+                 You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify:domain name              </td>
+             </tr>
 			 
 			 <tr>
-			    <td class="label"> Message : </td>
-				<td><textarea name="message" ></textarea>  Domains sent to ZISPA can only be Modified (M) Deleted (D) or Registered (N) 
-                											
-
+			    <td class="mail_input_labels" > Message : </td>
+				<td ><textarea name="message" id="message"  ></textarea><span id="invalid-message" class="error_msg"></span>
+                Domains sent to ZISPA can only be Modified (M) , Deleted (D) or Newly Registered (N)
                 
-                <span id="invalid-message" class="error_msg"></span></td>
+                so the following messages are the only ones applicable 
+                                
+  If its New Domain ,message will be e.g: register NEW domain afri-com.co.zw
+  If its MODIFY Domain ,message will be e.g: Modify domain afri-com.co.zw and this is the only time that you attach a release letter from the current ISP
+  If its Delete Domain ,message will be e.g: DELETE domain afri-com.co.zw and there is no attachment
+                </td>
+          
 				
 			 </tr>
 			 
 			 <tr>
-			    <td colspan="2"> <input type="submit" value="Send Mail!" id='submit_btn' name="submit_btn" class="submit_btn"/></td>
+			    <td colspan="2"> <input type="submit" value="Send Mail Attachment!" id='submit_btn' name="submit_btn" class="submit_btn"/></td>
 			 </tr>
 		</table>
 		</form>
+        
         </div>
        	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
+   	<script src="js/jquery.validate.min.js"></script>
 	<script>
 	  (function($){
 	     jQuery.validator.setDefaults({
@@ -254,7 +253,7 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   required: true,
 					   email: true,
 					},
-					image: "required",
+					letter: "required",
 					message: "required",
 				},
 				messages: {
@@ -268,7 +267,7 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 					   minlength: "Please enter a valid email address",
 					},
 				
-				    image: "Please Choose your image",
+				    letter: "Please Upload the release Letter",
 					message: "Please enter your message",
 					subject: { 
 					   required: "Please enter your subject",
@@ -280,7 +279,6 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 	</script>
 
      
-
 
 
 <?php
