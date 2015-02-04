@@ -294,7 +294,7 @@ echo"You are about to send template " . $downloadFileName . " to Zispa" . "<a hr
 <?php
 echo "</div>" ;
 
-echo "<h5>Courtesy of the Service Management Center (SMC) Africom@2015</h5>";
+echo "<h5>Courtesy of a Service Management Engineer @2015</h5>";
 
 
 
