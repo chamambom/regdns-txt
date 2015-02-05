@@ -138,7 +138,7 @@
     <li>
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="domain_name"  id="validcustomerdomainname"> e.g africom.co.zw
+        <input type="text" name="domain_name"  id="validcustomerdomainname" title="e.g africom.co.zw"> 
    		</p>
         
         <p>

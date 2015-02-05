@@ -19,7 +19,7 @@
 	background:#ffebe8;
 	float:right;
 	width:300px;
-border:1px solid #eceff6;
+    border:1px solid #FF9F9F;
 	text-align:center;
 	font-size:17px;
 	padding:12px 5px;
@@ -27,7 +27,7 @@ border:1px solid #eceff6;
 }
 .field_widget_z{
 	background:#ffebe8;
-border:1px solid #eceff6;
+    border:1px solid #FF9F9F;
 	color:#3b5998;
 	text-align:center;
 	font-size:17px;
@@ -52,10 +52,8 @@ p{
 	border:solid 2px #FF9F9F;
 	padding:25px;
 	font-size: 16px;	
-		  letter-spacing:2px;
-		  border-radius:4px;	
-
-
+	letter-spacing:2px;
+	border-radius:4px;	
 }
 
 
@@ -89,9 +87,9 @@ background-color:#ffebe8;
 text-align:center;
 width:84%;
 margin: 4px auto;
-padding:8px;
+padding:5px;
 border-radius:4px;
-border:1px solid #eceff6;
+border:2px solid #FF9F9F;
 	
 	}
 	.headings{

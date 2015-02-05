@@ -229,7 +229,7 @@ the line above was for me to see if the template is being passed from the previo
         
         </div>
        	<script src="js/jquery-1.9.1.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script><link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">        
         <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
    	<script src="js/jquery.validate.min.js"></script>
 	<script>
