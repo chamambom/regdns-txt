@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
         <link rel="stylesheet" type="text/css" href="css/jquery.validate.css" />
+        <link rel="stylesheet" href="css/justthetip.css">
        <script src="js/jquery-1.3.2.js" type="text/javascript">       </script>
         <script src="js/jquery.validate.js" type="text/javascript"></script>
+<script src="js/justthetip.js"></script>
         
        <script type="text/javascript">
             /* <![CDATA[ */
-            jQuery(function(){
+			
+			
+			
+            jQuery(function($){
 				
-				jQuery("#validfax").validate({
+				
+
+
+				
+				
+            		jQuery("#validfax").validate({
                     expression: "if (!isNaN(VAL) && VAL) return true; else return false;",
                     message: "Please enter a valid fax number"
                 });
@@ -138,8 +149,14 @@
     <li>
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="domain_name"  id="validcustomerdomainname" title="e.g africom.co.zw"> 
-   		</p>
+        <input type="text" name="domain_name"  id="validcustomerdomainname">    
+        <span id='jttrigger-0' href='#'>hint!</span>    
+        
+        <div id="jttip-0" class="jttip" style="display:none;">
+        <div class="jttipcontent"><p>e.g africom.co.zw</p></div>
+        </div>
+   		
+        </p>
         
         <p>
         <label for="state">Domain Status:</label>
@@ -149,6 +166,10 @@
   		<option value="D">Delete</option>
   		<option value="M">Modify</option>
 		</select>
+         <span id='jttrigger-1' href='#'>hint!</span>    
+         <div id="jttip-1" class="jttip" style="display:none;">
+        <div class="jttipcontent"><p>Domain status can either be New ,Modify or Delete</p></div>
+        </div>
       	</p>
         
         <p hidden>
@@ -177,12 +198,22 @@
          
         <p>
     	<label for="customerdomainowner">Domain Owner:</label>
-        <input type="text" name="domainOwner"  id="validcustomerdomainowner"> e.g africom Pvt Ltd
+        <input type="text" name="domainOwner"  id="validcustomerdomainowner"> 
+         <span id='jttrigger-2' href='#'>hint!</span>    
+         <div id="jttip-2" class="jttip" style="display:none;">
+        <div class="jttipcontent"><p>e.g Africom or Martin Chamambo e.t.c</p></div>
+        </div>
+
    	   </p>
        
         <p>
     	<label for="domain_owner_org_desc">Description of domain owner's organisation:</label>
-        <textarea name="domain_owner_org_desc"  id="validdomain_owner_org_desc"></textarea> e.g Telecommunications
+        <textarea name="domain_owner_org_desc"  id="validdomain_owner_org_desc"></textarea> 
+        <span id='jttrigger-3' href='#'>hint!</span>    
+         <div id="jttip-3" class="jttip" style="display:none;">
+        <div class="jttipcontent"><p>Telecoms or Bank or Finance Institution e.t.c</p></div>
+        </div>
+
         </p>
         
         
@@ -235,11 +266,21 @@
        <p>
         <label for="domainusage">Proposed Domain Usage:</label>
         <input type="text" name="domain_usage"  id="validdomain_usage"/>
+                <span id='jttrigger-4' href='#'>hint!</span>    
+         <div id="jttip-4" class="jttip" style="display:none;">
+        <div class="jttipcontent"><p>e.g Webhosting ,Email hosting e.t.c</p></div>
+        </div>
+
       	</p>
     	
        <p>
     	<label for="customerorgname">Domain Owner Organisation Name:</label>
         <input type="text" name="domain_owner_org_name"  id="vlaiddomain_owner_org_name"/>
+         <span id='jttrigger-5' href='#'>hint!</span>    
+         <div id="jttip-5" class="jttip" style="display:none;">
+        <div class="jttipcontent"><p>e.g Africom , Museyamwa & Assoc e.t.c</p></div>
+        </div>
+
         </p>
         
        

@@ -1,6 +1,9 @@
 <?php session_start(); ?>
 <link rel="stylesheet" type="text/css" href="css/domtables.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>        
+
 <?php
 
 if(isset($_GET['domain_id']))
@@ -31,7 +34,7 @@ if((mysqli_num_rows($result)) >0){
     while ($row=mysqli_fetch_array($result)){
 		
 
-	   echo"<h4> Below are the details you entered for domain ". $row['domain_name'] ." with domain Owner ". $row['domainOwner'] ." </h4>";	
+	   echo"<div class='header'> Below are the details you entered for domain ". $row['domain_name'] ." with domain Owner ". $row['domainOwner'] ." </div>";	
 	   
 	   echo"<div class='full_template'>";
 	   echo "<div class='field_widget_x'><a href='templateX.php'> Generate template and attach associated documents</a></div>";

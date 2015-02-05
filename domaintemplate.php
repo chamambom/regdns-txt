@@ -5,6 +5,9 @@ error_reporting (E_ALL ^ E_NOTICE);
 ?>
 <link rel="stylesheet" type="text/css" href="css/domtables.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+ <script src="js/jquery-ui.js"></script>
+ <link rel="stylesheet" href="css/jquery-ui.css"/>        
+
 
 <?php
 include('dbconnector.php');
@@ -15,7 +18,7 @@ $myresult1 = mysqli_query($link, $query1);
 if(mysqli_num_rows($myresult1)>0)
 		{	  
 		   echo "<table id='full_table_template' cellspacing='0' border ='0'>
-		   <tr><h4>Please verify your details using the link on the right side of your domain details below before sending it to ZISPA</h4></tr>
+		   <tr><div class='header'>Please verify your details using the link on the right side of your domain details below before sending it to ZISPA</div></tr>
 		   <tr>
 		   <th scope='col'>Domain Name &nbsp;</th>
            <th scope='col'> Domain Owner</th>

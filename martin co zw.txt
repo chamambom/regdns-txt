@@ -40,18 +40,18 @@
       0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003
 
       1.  DOMAIN NAME and ACTION
-      1a. Full domain name......................: dfsdf
-      1b. (N)ew or (M)odify or (D)elete.(N/M/D).: N
+      1a. Full domain name......................: martin.co.zw
+      1b. (N)ew or (M)odify or (D)elete.(N/M/D).: D
 
       2.  DOMAIN OWNER
-      2a. Domain Owner..........: sdfsd
-      2b. Organisation Name.....: sdfsd
-      2c. Physical Address......: sdfsd
-      2d. Postal Address .......: sdfsf
-      2e. Town/City.............: Harare
+      2a. Domain Owner..........: xcvcvxvxcvxc
+      2b. Organisation Name.....: xcxcvxc
+      2c. Physical Address......: xcvxcv
+      2d. Postal Address .......: xcvxcv
+      2e. Town/City.............: Gweru
       2f. Country...............: Zimbabwe
-      2g. Voice Phone...........: 1213132132
-      2h. Fax Number............: 1231231
+      2g. Voice Phone...........: 12312
+      2h. Fax Number............: 1231132
       2i. E-mail Address........: chamambom@gmail.com
 	  
       3.  ADMIN/BILLING CONTACT
@@ -67,8 +67,8 @@
       3j. E-mail Address........: smc@afri-com.net
    
       4.  DESCRIPTION OF ORGANISATION/DOMAIN
-      4a. Description of domain owner's organisation..: sdfsdf
-      4b. Proposed domain usage.: sdfsdfsfd
+      4a. Description of domain owner's organisation..: xcvxc
+      4b. Proposed domain usage.: xcvxcv
 
       5.  TECHNICAL CONTACT
       5a. ZISPA Handle..........: Africom
@@ -106,4 +106,4 @@
       following street address
       (Note: Post Office box or
       Post Office bag addresses
-      are not acceptable).......: sdfsd
+      are not acceptable).......: xcvxcv

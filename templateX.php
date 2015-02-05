@@ -154,7 +154,7 @@ $downloadFileName = ZwDomainTemplate($full_domain_name, $domain_status, $domain_
 
 $_SESSION['downloadFileName'] = $downloadFileName;
 
-echo"<h4> Please attach associated documents for domain $full_domain_name with domain Owner $domain_owner before sending to ZISPA </h4>";	
+echo"<div class='header'> Please attach associated documents for domain $full_domain_name with domain Owner $domain_owner before sending to ZISPA </div>";	
 
 
 
@@ -229,9 +229,10 @@ the line above was for me to see if the template is being passed from the previo
         
         </div>
        	<script src="js/jquery-1.9.1.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script><link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">        
+        <script src="js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>        
         <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
-   	<script src="js/jquery.validate.min.js"></script>
+   	   <script src="js/jquery.validate.min.js"></script>
 	<script>
 	
   (function($){

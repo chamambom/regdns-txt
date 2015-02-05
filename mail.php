@@ -78,7 +78,7 @@ try {
 	
 	
 	
-	echo"<h4> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  " .$mail->From  ." for ZISPA feedback  </h4>";	
+	echo"<div class='header'> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  " .$mail->From  ." for ZISPA feedback  </div>";	
 		
 	echo"<div class='full_template'>";
 	echo 'Your Template has been sent to ZISPA.';
