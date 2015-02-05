@@ -38,7 +38,11 @@ border:1px solid #eceff6;
 .title{
 		font-size:17px;
 		color:#F00;
-
+	}
+	
+p{
+	color:#F00;
+	
 	}
 /* domaintemplate table definition*/
 

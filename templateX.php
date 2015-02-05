@@ -182,7 +182,7 @@ the line above was for me to see if the template is being passed from the previo
 			    <td class="mail_input_labels"> Your Name Please : </td>
 				<td ><input type="text" id="name" name="name"  placeholder='User Name' />
 				  <span id="invalid-name" class="error_msg"></span>
-                  We only need it for records purposes
+                  <p title="We only need it for records purposes">hint</p>
 				</td>
 			 </tr>
 			 <tr>
@@ -195,7 +195,7 @@ the line above was for me to see if the template is being passed from the previo
 			    <td class="mail_input_labels"> Subject : </td>
 				<td ><input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'/>
                     <span id="invalid-subject" class="error_msg"></span>
-                	(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here
+                	<p title="(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here">hint</p>
 				   
 				</td>
 			 </tr>
@@ -203,19 +203,19 @@ the line above was for me to see if the template is being passed from the previo
 			 <tr>
 			    <td class="mail_input_labels"> Release Letter : </td>
 				<td ><input type="file" id="letter" name="letter"  placeholder='Release Letter'/> <span id="invalid-letter" class="error_msg"></span>
-                 You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify:domain name              </td>
+                <p title=" You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify:domain name">hint</p>              </td>
              </tr>
 			 
 			 <tr>
 			    <td class="mail_input_labels" > Message : </td>
 				<td ><textarea name="message" id="message"  ></textarea><span id="invalid-message" class="error_msg"></span>
-                Domains sent to ZISPA can only be Modified (M) , Deleted (D) or Newly Registered (N)
+                <p title="Domains sent to ZISPA can only be Modified (M) , Deleted (D) or Newly Registered (N)
                 
                 so the following messages are the only ones applicable 
                                 
   If its New Domain ,message will be e.g: register NEW domain afri-com.co.zw
   If its MODIFY Domain ,message will be e.g: Modify domain afri-com.co.zw and this is the only time that you attach a release letter from the current ISP
-  If its Delete Domain ,message will be e.g: DELETE domain afri-com.co.zw and there is no attachment
+  If its Delete Domain ,message will be e.g: DELETE domain afri-com.co.zw and there is no attachment">hint</p>
                 </td>
           
 				
@@ -229,14 +229,37 @@ the line above was for me to see if the template is being passed from the previo
         
         </div>
        	<script src="js/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
    	<script src="js/jquery.validate.min.js"></script>
 	<script>
-	  (function($){
+	
+  (function($){
+		  
+		  $( document ).tooltip({
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+		  
+		  
+		  
 	     jQuery.validator.setDefaults({
 			errorPlacement: function(error, element) {
 				error.appendTo('#invalid-' + element.attr('id'));
 			}
 		});
+		
+ 	
 	     $("#mailForm").validate({
 		        rules: {
 					name: {
@@ -277,9 +300,6 @@ the line above was for me to see if the template is being passed from the previo
 		 });
 	  })($);
 	</script>
-
-     
-
 
 <?php
 echo "</div>" ;
