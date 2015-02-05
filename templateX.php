@@ -4,7 +4,6 @@
     <meta charset='utf-8'>
 
 <link rel="stylesheet" href="css/mail.css"/>
-<link rel="stylesheet" type="text/css" href="css/domtables.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <?php

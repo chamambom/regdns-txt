@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/justthetip.css">
        <script src="js/jquery-1.3.2.js" type="text/javascript">       </script>
         <script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/justthetip.js"></script>
+        <script src="js/justthetip.js"></script>
         
        <script type="text/javascript">
             /* <![CDATA[ */
@@ -137,10 +137,12 @@
 </head>
 <body onLoad="collapsePages()">
 
+<div class="header">Please Fill All The required Information in order to complete your domain registration !</div>
+
+
 <form method="post" action="process.php" onSubmit="return" id="regform">
 
 <fieldset>
-<h4>Please Fill All The required Information in order to complete your domain registration !</h4>
 
 <legend>Africom ZISPA Domain Registration Form</legend>
 

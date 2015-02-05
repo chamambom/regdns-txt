@@ -25,7 +25,7 @@ height: 30px;
    border: 1px solid green;
 }
 .submit_btn:hover{
-   background: green;
+   background:#8DC73F;
    border: 1px solid green;
    color: #fff;
 }

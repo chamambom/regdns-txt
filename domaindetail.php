@@ -1,5 +1,4 @@
 <?php session_start(); ?>
-<link rel="stylesheet" type="text/css" href="css/domtables.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
         <script src="js/jquery-ui.js"></script>
         <link rel="stylesheet" href="css/jquery-ui.css"/>        
