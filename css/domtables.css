@@ -19,7 +19,7 @@
 	background:#ffebe8;
 	float:right;
 	width:300px;
-	border:1px solid #ccc;
+border:1px solid #eceff6;
 	text-align:center;
 	font-size:17px;
 	padding:12px 5px;
@@ -27,7 +27,7 @@
 }
 .field_widget_z{
 	background:#ffebe8;
-	border:1px solid #ccc;
+border:1px solid #eceff6;
 	color:#3b5998;
 	text-align:center;
 	font-size:17px;
@@ -87,10 +87,22 @@ width:84%;
 margin: 4px auto;
 padding:8px;
 border-radius:4px;
-border:0px solid #ccc;
+border:1px solid #eceff6;
 	
 	}
+	.headings{
+ color:#EF413D;
+  margin: 1.4em 0;
+	}
 	
+#poboxaddress{
+	width:420px;
+	height:120px;
+	border:solid 0px #036;
+	margin-top:12px;
+	
+	}
+
 	
 caption {
 	padding: 0 0 5px 0;
@@ -142,18 +154,6 @@ td.alt {
 
 
 }
-.headings{
- color:#EF413D;
-  margin: 1.4em 0;
-	}
-	
-#poboxaddress{
-	width:420px;
-	height:120px;
-	border:solid 0px #036;
-	margin-top:12px;
-	
-	}
 /*th.spec {
 	border-left: 1px solid #C1DAD7;
 	border-top: 0;

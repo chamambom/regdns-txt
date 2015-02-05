@@ -18,7 +18,7 @@ $full_domain_name =$_SESSION['domain_name'];
 $downloadFileName=$_SESSION['downloadFileName'];
 
 
-echo "<a href='./{$downloadFileName}'>View Template</a>";
+//echo "<a href='./{$downloadFileName}'>View Template</a>";
 
 try {
     $mail = new PHPMailer(true); //New instance, with exceptions enabled
@@ -78,10 +78,10 @@ try {
 	
 	
 	
-	echo"<h4> Thank you very much  $registrant for sending $full_domain_name to ZISPA, Check your email  " .$mail->From  ." for feedback  </h4>";	
+	echo"<h4> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  " .$mail->From  ." for ZISPA feedback  </h4>";	
 		
 	echo"<div class='full_template'>";
-	echo 'Your Message has been sent.';
+	echo 'Your Template has been sent to ZISPA.';
 	
 
 } catch (phpmailerException $e) {
