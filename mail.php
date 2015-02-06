@@ -69,7 +69,7 @@ try {
 	$mail->AddReplyTo("smc@afri-com.net");
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 0; // set word wrap	
-	$mail->AddAttachment($_FILES['letter']['tmp_name'], $_FILES['letter']['name']);
+	//$mail->AddAttachment($_FILES['letter']['tmp_name'], $_FILES['letter']['name']);
     $mail->AddAttachment($downloadFileName,$downloadFileName);	
 	
 	$mail->IsHTML(true); // send as HTML
@@ -78,7 +78,7 @@ try {
 	
 	
 	
-	echo"<div class='header'> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  " .$mail->From  ." for ZISPA feedback  </div>";	
+	echo"<div class='header'> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  " .$mail->From  ." for ZISPA Confirmation  </div>";	
 		
 	echo"<div class='full_template'>";
 	echo 'Your Template has been sent to ZISPA.';

@@ -276,7 +276,7 @@ the line above was for me to see if the template is being passed from the previo
 					   required: true,
 					   email: true,
 					},
-					letter: "required",
+					letter: {required:false},
 					message: "required",
 				},
 				messages: {
