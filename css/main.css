@@ -17,41 +17,20 @@ html body {
 	text-decoration:none;
 	}
 	  
-ul {list-style-type:none;}
 
 fieldset {
 	border:solid 2px #FF9F9F;
-    padding:5px;
-    width:84%;
+    padding-left:12px;
+    width:83%;
   	margin: 0 auto;
-
+	border-radius:4px;
 }
+
 legend {
 	font-weight:bold;
 	color:#8DC73F;
-	
+
 	}
-
-.meter { 
-	width:90%;
-	height: 30px;
-	position: relative;
-	background: #ccc;
-	border:solid 2px #CCCCCC;
-	color:#666;
-	border-radius:4px;
-	margin:0px;
-
-}
-.meter > span {
-	padding-left: 5px;
-	display: block;
-	height: 100%;
-	background-color: #FFC4C4;
-	position: relative;
-	overflow: hidden;
-}
-
 
 #regform label {
     width:335px;
@@ -59,7 +38,7 @@ legend {
     display:inline-block;
     float:left;
     padding:3px;
-	      color:#999;
+	color:#999;
 
 }
 input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
@@ -73,12 +52,10 @@ input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
 textarea {
 	padding:4px; 
 	width:230px;
-    height:70px;
+    height:60px;
 	position:inherit; 
     border:1px solid #0C0;
     border-radius:4px;
-
-
 	}
 
 #regform input:focus, #regform textarea:focus{
@@ -96,7 +73,6 @@ textarea {
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;	
 	}
-	
 	
 	
 /* Button Style */
@@ -209,6 +185,7 @@ border-radius:4px;
 border:0px solid #FF9F9F;
 	
 	}
+	
 	.headings{
  color:#EF413D;
   margin: 1.4em 0;
