@@ -10,14 +10,22 @@
 .mail{
   width: 70%;
   margin:0 auto;
+  display:none;
 }
 #image{
 
 height: 30px;
 }
 .title{
-  text-align: center;
-  margin: 10px 0 10px 0;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    background:#ABFF96;
+    border:1px solid #FF9F9F;
+	color:#3b5998;
+	text-align:center;
+	font-size:17px;
+	padding:12px 5px;
+	border-radius:4px;	
 }
 
 .form-input:focus{

@@ -165,7 +165,7 @@ echo"<div class='header'> Please attach associated documents for domain $full_do
 <?php 
 
 echo"<div class='full_template'>";
-echo"<div class='field_widget_z'>The Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa , if its a NEW domain then dont attach any documents but if you are MODIFYING a domain (a domain that is being transfered to Africom) ,please attach the release letter using the form below </div>";
+echo"<div class='field_widget_z'>The Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa </div>";
 
 /* "<a href='./{$downloadFileName}'>View Template</a>          
 
@@ -173,7 +173,7 @@ the line above was for me to see if the template is being passed from the previo
 */
 ?>
 
-<div class="title">Attach Supporting Documents Here</div>
+<div class="title"><a href="#" >Click Here to SEND YOUR TEMPLATE to ZISPA or to Attach Supporting Documents if you are modifying your DOMAIN</a></div>
 	<div class="mail">
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
 	    <table border="0">
@@ -220,19 +220,38 @@ the line above was for me to see if the template is being passed from the previo
 				
 			 </tr>
 			 
-			 <tr>
-			    <td colspan="2"> <input type="submit" value="Send Mail Attachment!" id='submit_btn' name="submit_btn" class="submit_btn"/></td>
-			 </tr>
+	    <tr>
+		  <td colspan="2"> <input type="submit" value="Send Mail Attachment!" id='submit_btn' name="submit_btn" class="submit_btn"/></td>
+		</tr>
 		</table>
 		</form>
         
         </div>
+        
        	<script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery-ui.js"></script>
         <link rel="stylesheet" href="css/jquery-ui.css"/>        
         <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
    	   <script src="js/jquery.validate.min.js"></script>
 	<script>
+	
+	
+	//this coe below is for the attachment form
+	
+        $('.title').click(function(){
+            var txt = "Hide Attachment Form";
+            if ($(".title").html()==txt)
+            {
+                txt = "Show Attachment form";
+            }
+			
+            $(".title").html(txt);
+
+
+            $(".mail").slideToggle("medium");
+        });
+ 
+	
 	
   (function($){
 		  
