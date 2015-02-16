@@ -31,10 +31,10 @@
                 message: "Please enter a valid mobile phone number"
                 });
 				
-                jQuery("#validcustomerdomainname").validate({
+                /*jQuery("#validcustomerdomainname").validate({
                     expression: "if (VAL) return true; else return false;",
                     message: " Please note that this field is a Required"
-                });
+                });*/
 				
 				jQuery("#validdomain_owner_org_desc").validate({
                     expression: "if (VAL) return true; else return false;",
@@ -104,8 +104,10 @@ function username_check(){
 var domain_name = $('#validcustomerdomainname').val();
 
 if(domain_name == "" || domain_name.length < 4){
-$('#validcustomerdomainname').css('border', '3px #CCC solid');
+$('#validcustomerdomainname').css('border', '3px #C33 solid');
 $('#tick').hide();
+$('#dlength').show();
+
 }else{
 
 jQuery.ajax({
@@ -118,10 +120,13 @@ jQuery.ajax({
 				$('#validcustomerdomainname').css('border', '3px #C33 solid');	
 				$('#tick').hide();
 				$('#cross').fadeIn();
+     			$('#invalid').fadeIn();				
+
 				}else{
 				$('#validcustomerdomainname').css('border', '3px #090 solid');
 				$('#cross').hide();
 				$('#tick').fadeIn();
+				$('#valid').fadeIn();				
 					 }
 
 }  //close function response
@@ -158,6 +163,10 @@ jQuery.ajax({
         <input type="text" name="domain_name"  id="validcustomerdomainname">  
         <img id="tick" src="images/tick.png" width="16" height="16"/>
         <img id="cross" src="images/cross.png" width="16" height="16"/>
+        <span id="valid">Domain is available</span>
+        <span id="invalid">Domain name NOT avaliable</span>
+        <span id="dlength">This field cannot be less than 4 characters</span>
+
 
   
         <span id='jttrigger-0' href='#'>hint!</span>    

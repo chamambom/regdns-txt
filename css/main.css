@@ -253,8 +253,35 @@ td.alt {
 
 /* code for the valid_domain_validation*/
 
-#tick{display:none}
-#cross{display:none}
+#tick{
+	display:none;
+
+}
+#cross{
+	display:none;
+
+}
+
+#valid{
+	display:none;
+	color:#090;
+}
+#invalid{
+	display:none;
+		color:#C33;
+
+}
+
+#dlength{
+	display:none;
+		color:#C33;
+
+}
+
+
+
+
+
 
 /*th.spec {
 	border-left: 1px solid #C1DAD7;
