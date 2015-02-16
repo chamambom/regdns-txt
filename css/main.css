@@ -57,6 +57,8 @@ textarea {
     border:1px solid #0C0;
     border-radius:4px;
 	}
+	
+	
 
 #regform input:focus, #regform textarea:focus{
     background: #fff; 
@@ -77,9 +79,9 @@ textarea {
 	
 /* Button Style */
 
-.bclicks{
-background:#ccc;
-border:solid 1px #CCCCCC;
+.submit_b{
+background:#ABFF96;
+border:1px solid #0C0;
 color:#666;
 font-size:20px;
 width:16%;
@@ -169,8 +171,8 @@ color:#fff;
 font-size:17px;
 background-color:#EF413D;
 text-align:center;
-width:84.9%;
-margin: 4px auto;
+width:85%;
+margin: 2px auto;
 padding:30px 0px;
 border-radius:4px;	
 	}
@@ -248,6 +250,12 @@ td.alt {
 
 
 }
+
+/* code for the valid_domain_validation*/
+
+#tick{display:none}
+#cross{display:none}
+
 /*th.spec {
 	border-left: 1px solid #C1DAD7;
 	border-top: 0;

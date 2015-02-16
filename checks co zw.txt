@@ -40,19 +40,19 @@
       0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003
 
       1.  DOMAIN NAME and ACTION
-      1a. Full domain name......................: 
-      1b. (N)ew or (M)odify or (D)elete.(N/M/D).: 
+      1a. Full domain name......................: checks.co.zw
+      1b. (N)ew or (M)odify or (D)elete.(N/M/D).: D
 
       2.  DOMAIN OWNER
-      2a. Domain Owner..........: 
-      2b. Organisation Name.....: 
-      2c. Physical Address......: 
-      2d. Postal Address .......: 
-      2e. Town/City.............: 
-      2f. Country...............: 
-      2g. Voice Phone...........: 
-      2h. Fax Number............: 
-      2i. E-mail Address........: 
+      2a. Domain Owner..........: sdsdsd
+      2b. Organisation Name.....: sdfsdf
+      2c. Physical Address......: sdfsd
+      2d. Postal Address .......: sdfsdf
+      2e. Town/City.............: Gweru
+      2f. Country...............: Zimbabwe
+      2g. Voice Phone...........: 123132
+      2h. Fax Number............: 123132
+      2i. E-mail Address........: chamambom@gmail.com
 	  
       3.  ADMIN/BILLING CONTACT
       3a. ZISPA Handle..........: Africom
@@ -67,8 +67,8 @@
       3j. E-mail Address........: smc@afri-com.net
    
       4.  DESCRIPTION OF ORGANISATION/DOMAIN
-      4a. Description of domain owner's organisation..: 
-      4b. Proposed domain usage.: 
+      4a. Description of domain owner's organisation..: fdsdf
+      4b. Proposed domain usage.: sdfsdf
 
       5.  TECHNICAL CONTACT
       5a. ZISPA Handle..........: Africom
@@ -106,4 +106,4 @@
       following street address
       (Note: Post Office box or
       Post Office bag addresses
-      are not acceptable).......: 
+      are not acceptable).......: sdfsd

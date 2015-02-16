@@ -95,10 +95,42 @@
 				
             });
             /* ]]> */
+			
+$(document).ready(function(){
+$('#validcustomerdomainname').blur(username_check);
+});
+	
+function username_check(){	
+var domain_name = $('#validcustomerdomainname').val();
+jQuery.ajax({
+   type: "POST",
+   url: "check.php",
+   data: 'domain_name='+ domain_name,
+   cache: false,
+   success: function(response){
+			if(response == 1){
+				$('#validcustomerdomainname').css('border', '3px #C33 solid');	
+				$('#tick').hide();
+				$('#cross').fadeIn();
+				}else{
+				$('#validcustomerdomainname').css('border', '3px #090 solid');
+				$('#cross').hide();
+				$('#tick').fadeIn();
+					 }
+
+}  //close function response
+
+
+}); //close ajax 
+
+
+
+
+}
+
+			
+			
         </script>
-
-
-
 
 <meta charset="UTF-8">
 <title>Add Records Form</title>
@@ -117,7 +149,11 @@
 
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="domain_name"  id="validcustomerdomainname">    
+        <input type="text" name="domain_name"  id="validcustomerdomainname">  
+        <img id="tick" src="images/tick.png" width="16" height="16"/>
+        <img id="cross" src="images/cross.png" width="16" height="16"/>
+
+  
         <span id='jttrigger-0' href='#'>hint!</span>    
         
         <div id="jttip-0" class="jttip" style="display:none;">
@@ -304,7 +340,7 @@
   </tr>
        </table>
             
-    <input type="submit" value="Submit" name="register" id="register" class="bclicks">
+    <input type="submit" value="Submit" name="register" id="register" class="submit_b">
     
 </fieldset>
 </form>
