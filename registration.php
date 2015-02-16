@@ -102,6 +102,12 @@ $('#validcustomerdomainname').blur(username_check);
 	
 function username_check(){	
 var domain_name = $('#validcustomerdomainname').val();
+
+if(domain_name == "" || domain_name.length < 4){
+$('#validcustomerdomainname').css('border', '3px #CCC solid');
+$('#tick').hide();
+}else{
+
 jQuery.ajax({
    type: "POST",
    url: "check.php",
@@ -124,7 +130,7 @@ jQuery.ajax({
 }); //close ajax 
 
 
-
+}  //close else
 
 }
 
