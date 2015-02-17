@@ -11,7 +11,9 @@
   width: 70%;
   margin:0 auto;
   display:none;
+  padding:5px;
 }
+
 #image{
 
 height: 30px;
@@ -38,17 +40,6 @@ border:1px solid #0C0;
    color: #fff;
 }
 
-.submit_btn{
-  margin-left: 140px;
-  width: 280px;
-  height: 45px;
-  border-radius: 4px;
-  color: #fff;
-  background-color: #ccc;
-  font: bold 15px Verdana;
-  margin-bottom: 100px;
-    border:1px solid #0C0;
-}
 
 em.error {
   background:url("unchecked.gif") no-repeat 0px 0px;

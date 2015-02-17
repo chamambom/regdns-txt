@@ -44,18 +44,21 @@ legend {
 input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
     height:20px; 
     width:220px; 
-    padding:5px 8px;
+    padding:8px 5px;
     border:1px solid #0C0;
     border-radius:4px;
+	margin-top:5px;
 
 }
 textarea {
-	padding:4px; 
+    padding:8px 0px;
 	width:230px;
     height:60px;
 	position:inherit; 
     border:1px solid #0C0;
     border-radius:4px;
+	margin-top:5px;
+
 	}
 	
 	
@@ -136,7 +139,7 @@ input[type=button]:hover{
 	}
 	
 p{
-	color:#FF9494;
+	color:#EE1221;
 	
 	}
 /* domaintemplate table definition*/
@@ -235,6 +238,7 @@ td {
 
 .mail_input_labels{
 	width:25%;
+	float:left;
 	}
 
 #mailForm td{

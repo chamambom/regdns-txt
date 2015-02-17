@@ -173,57 +173,64 @@ the line above was for me to see if the template is being passed from the previo
 */
 ?>
 
-<div class="title"><a href="#" >Click Here to SEND YOUR TEMPLATE to ZISPA or to Attach Supporting Documents if you are modifying your DOMAIN</a></div>
+<div class="title"><a href="#" >Click to SEND YOUR TEMPLATE to ZISPA or if you want to Attach Supporting Documents</a></div>
 	<div class="mail">
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
-	    <table border="0">
-		     <tr>
-			    <td class="mail_input_labels"> Your Name Please : </td>
-				<td ><input type="text" id="name" name="name"  placeholder='User Name' />
+	
+		  
+			<div class="mail_input_labels"> Your Name Please : </div>
+            
+			    <div class="form_inputfileds">
+            	<input type="text" id="name" name="name"  placeholder='User Name'  title="We only need it for records purposes" />
 				  <span id="invalid-name" class="error_msg"></span>
-                  <p title="We only need it for records purposes">hint</p>
-				</td>
-			 </tr>
-			 <tr>
-			    <td class="mail_input_labels"> to - E-mail : </td>
-				<td ><input type="email" id="email" name="email"  placeholder='smc@afri-com.net'/>
-				   <span id="invalid-email" class="error_msg"></span>
-				</td>
-			 </tr>
-			 <tr>
-			    <td class="mail_input_labels"> Subject : </td>
-				<td ><input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'/>
+                  
+				</div>
+			 
+			 
+			    <div class="mail_input_labels"> to - E-mail : </div>
+				<div class="form_inputfileds">
+                <input type="email" id="email" name="email"  placeholder='smc@afri-com.net'/>
+				<span id="invalid-email" class="error_msg"></span>
+				</div>
+	
+		
+			    <div class="mail_input_labels"> Subject : </div>
+				<div class="form_inputfileds">                
+             <input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'  title="(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here"/>
                     <span id="invalid-subject" class="error_msg"></span>
-                	<p title="(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here">hint</p>
+                	
 				   
-				</td>
-			 </tr>
+				</div>
+			
 			 
-			 <tr>
-			    <td class="mail_input_labels"> Release Letter : </td>
-				<td ><input type="file" id="letter" name="letter"  placeholder='Release Letter'/> <span id="invalid-letter" class="error_msg"></span>
-                <p title=" You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify:domain name">hint</p>              </td>
-             </tr>
-			 
-			 <tr>
-			    <td class="mail_input_labels" > Message : </td>
-				<td ><textarea name="message" id="message"  ></textarea><span id="invalid-message" class="error_msg"></span>
-                <p title="Domains sent to ZISPA can only be Modified (M) , Deleted (D) or Newly Registered (N)
+			
+			    <div class="mail_input_labels"> Release Letter : </div>
+			<div class="form_inputfileds">
+           <input type="file" id="letter" name="letter"  placeholder='Release Letter' title=" You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify:domain name"/> <span id="invalid-letter" class="error_msg"></span>
+                            
+             </div>
+         			 
+			
+			    <div class="mail_input_labels" > Message : </div>
+				<div class="form_inputfileds">
+                <textarea name="message" id="message" title="Domains sent to ZISPA can only be Modified (M) , Deleted (D) or Newly                   Registered (N)
                 
                 so the following messages are the only ones applicable 
                                 
-  If its New Domain ,message will be e.g: register NEW domain afri-com.co.zw
-  If its MODIFY Domain ,message will be e.g: Modify domain afri-com.co.zw and this is the only time that you attach a release letter from the current ISP
-  If its Delete Domain ,message will be e.g: DELETE domain afri-com.co.zw and there is no attachment">hint</p>
-                </td>
+            If its New Domain ,message will be e.g: register NEW domain afri-com.co.zw
+            If its MODIFY Domain ,message will be e.g: Modify domain afri-com.co.zw and this is the only time that you attach a release   letter from the current ISP
+            If its Delete Domain ,message will be e.g: DELETE domain afri-com.co.zw and there is no attachment">
+  
+  </textarea><span id="invalid-message" class="error_msg"></span>
+                </div>
           
 				
-			 </tr>
+		
 			 
-	    <tr>
-		  <td colspan="2"> <input type="submit" value="Send Mail Attachment!" id='submit_btn' name="submit_btn" class="submit_btn"/></td>
-		</tr>
-		</table>
+
+	   <div class="mail_input_labels"> Send Template: </div>
+       <div class="form_inputfileds"><input type="submit" value="Send Mail!" id='submit_btn' name="submit_btn" class="submit_b"/></div>
+		
 		</form>
         
         </div>
