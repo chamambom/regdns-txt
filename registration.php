@@ -85,12 +85,11 @@
                 });
 				
 				
-				/*jQuery('#regform').validated(function(){
-					
-					
-					
+				/*jQuery('#regform').validated(function(){				
 					});
 				*/
+				
+				
 	  
 				
             });
@@ -117,17 +116,22 @@ jQuery.ajax({
    cache: false,
    success: function(response){
 			if(response == 1){
+    			$('#dlength').hide();
 				$('#validcustomerdomainname').css('border', '3px #C33 solid');	
 				$('#tick').hide();
 				$('#cross').fadeIn();
-     			$('#invalid').fadeIn();				
+     			$('#invalid').fadeIn();
+				$('#valid').hide();	
+				
 
 				}else{
+				$('#dlength').hide();
 				$('#validcustomerdomainname').css('border', '3px #090 solid');
 				$('#cross').hide();
 				$('#tick').fadeIn();
-				$('#valid').fadeIn();				
-					 }
+				$('#valid').fadeIn();	
+				$('#invalid').hide();				
+				 }
 
 }  //close function response
 
@@ -163,8 +167,8 @@ jQuery.ajax({
         <input type="text" name="domain_name"  id="validcustomerdomainname">  
         <img id="tick" src="images/tick.png" width="16" height="16"/>
         <img id="cross" src="images/cross.png" width="16" height="16"/>
-        <span id="valid">Domain is available</span>
-        <span id="invalid">Domain name NOT avaliable</span>
+        <span id="valid">Domain is available for registration</span>
+        <span id="invalid">Domain name is NOT avaliable for registration</span>
         <span id="dlength">This field cannot be less than 4 characters</span>
 
 

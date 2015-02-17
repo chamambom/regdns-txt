@@ -136,7 +136,7 @@ input[type=button]:hover{
 	}
 	
 p{
-	color:#F00;
+	color:#FF9494;
 	
 	}
 /* domaintemplate table definition*/
@@ -156,8 +156,7 @@ p{
 /* domaintdetail table definition*/
 
 .full_template{
-    font-size: 16px;
-	width:81%;
+	width:81.2%;
     margin: 0px auto;
 	border:solid 2px #FF9F9F;
 	padding:24px;

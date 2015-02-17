@@ -2,16 +2,15 @@
 /* CSS Document */
 
 .ui-tooltip, .arrow:after {
-    background: black;
-    border: 2px solid white;
+    background: #87E3FF;
+    border: 3px solid white;
   }
   .ui-tooltip {
-    padding: 10px 20px;
-    color: white;
-    border-radius: 20px;
-    font: bold 14px "Helvetica Neue", Sans-Serif;
-    text-transform: uppercase;
-    box-shadow: 0 0 7px black;
+	padding: 10px 10px 10px 10px;
+    color:#FF9494;
+    border-radius: 4px;
+	font-size:14px;
+	
   }
   .arrow {
     width: 70px;
@@ -36,7 +35,6 @@
     top: -20px;
     width: 25px;
     height: 25px;
-    box-shadow: 6px 5px 9px -9px black;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
