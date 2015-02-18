@@ -71,8 +71,8 @@ textarea {
 
 .selectbox{
 	height:35px; 
-    width:239px; 
-    padding:5px 8px;
+    width:230px; 
+    padding:8px 5px;
 
     border:1px solid #0C0;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
@@ -86,7 +86,7 @@ textarea {
 background:#ABFF96;
 border:1px solid #0C0;
 color:#666;
-font-size:20px;
+font-size:18px;
 width:16%;
 margin-bottom:2px;
 border-radius:4px;
@@ -133,10 +133,6 @@ input[type=button]:hover{
 	border-radius:4px;	
 	}
 
-.title{
-		font-size:17px;
-		color:#F00;
-	}
 	
 p{
 	color:#EE1221;

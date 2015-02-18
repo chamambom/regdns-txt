@@ -106,6 +106,8 @@ if(domain_name == "" || domain_name.length < 4){
 $('#validcustomerdomainname').css('border', '3px #C33 solid');
 $('#tick').hide();
 $('#dlength').show();
+$('#valid').hide();	
+
 
 }else{
 
