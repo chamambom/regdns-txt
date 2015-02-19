@@ -91,6 +91,6 @@ echo "</div>";
 
 echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
 
-header('Location: mail.php');
+header('Location: templateX.php');
 
 ?>

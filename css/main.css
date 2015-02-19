@@ -51,8 +51,8 @@ input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
 
 }
 textarea {
-    padding:8px 0px;
-	width:230px;
+    padding:8px 5px;
+	width:220px;
     height:60px;
 	position:inherit; 
     border:1px solid #0C0;
