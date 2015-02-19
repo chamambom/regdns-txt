@@ -81,6 +81,8 @@ try {
 	echo $e->errorMessage();
 }
 
+$_SESSION['name'] = $registrant;
+
 
 header('Location: mailsuccess.php');
 
