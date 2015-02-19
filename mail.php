@@ -42,7 +42,7 @@ try {
 						 </tr>	  
 							<tr><td></td> </tr>
 						 <tr>
-							  <td>Please ".$_POST['message']."</td>
+							 <td>Please ".$_POST['message']. "</td>
 						</tr>
 							<tr><td></td> </tr>
 							  <tr>
@@ -90,5 +90,7 @@ try {
 echo "</div>";
 
 echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
+
+header('Location: mail.php');
 
 ?>
