@@ -9,7 +9,7 @@ html body {
 	  margin:0;
       padding:0;
 	  letter-spacing:1px;
-	  background:#F8FDEF;
+	  background:#fff;
       }
 	  
  a {
@@ -24,12 +24,10 @@ fieldset {
     width:83%;
   	margin: 0 auto;
 	border-radius:4px;
+	background:#fff9d7;
+	
 }
 
-legend {
-	color:#666;
-
-	}
 
 #regform label {
     width:335px;
@@ -47,6 +45,7 @@ input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
     border:1px solid #0C0;
     border-radius:4px;
 	margin-top:5px;
+	background:#eceff6;
 
 }
 textarea {
@@ -57,13 +56,15 @@ textarea {
     border:1px solid #0C0;
     border-radius:4px;
 	margin-top:5px;
+	background:#eceff6;
+
 
 	}
 	
 	
 
 #regform input:focus, #regform textarea:focus{
-    background: #fff; 
+	background:#eceff6;
     border:1px solid #555; 
     box-shadow: 0 0 3px #aaa; 
 }
@@ -73,8 +74,9 @@ textarea {
     width:230px; 
     padding:8px 5px;
     border:1px solid #0C0;
-    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;	
+		background:#eceff6;
+
 	}
 	
 	
@@ -85,15 +87,10 @@ background:#ABFF96;
 border:1px solid #0C0;
 color:#666;
 font-size:18px;
-width:16%;
+width:20%;
 margin-bottom:2px;
 border-radius:4px;
-height: 35px;
-
-}
-
-input[type=button]:hover{
-	background-color:#8DA4F1;
+padding:10px;
 }
 
 
@@ -146,6 +143,8 @@ p{
 	font-size: 16px;	
 	letter-spacing:2px;
 	border-radius:4px;	
+	background:#fff9d7;
+
 }
 
 
@@ -159,6 +158,8 @@ p{
 	padding:24px;
     letter-spacing:2px;
 	border-radius:4px;	
+	background:#fff9d7;
+
 
 	}
 
@@ -177,7 +178,7 @@ color:#CCC;
 background-color:#EF413D;
 text-align:center;
 width:83%;
-margin: 2px auto;
+margin: 1px auto 3px auto;
 padding:15px;
 border-radius:4px;
 border:0px solid #FF9F9F;
@@ -207,25 +208,25 @@ caption {
 
 th {
 	color:#3b5998;
-	border-right: 1px solid #C1DAD7;
-	border-bottom: 1px solid #C1DAD7;
-	border-top: 1px solid #C1DAD7;
+	border-right: 1px solid #d4dae8;
+	border-bottom: 1px solid #d4dae8;
+	border-top: 1px solid #d4dae8;
 	text-align: left;
 	padding: 6px 6px 6px 12px;
-    background-color: #ffebe8;
+    background-color: #eceff6;
 }
 
 th.nobg {
 	border-top: 0;
 	border-left: 0;
-	border-right: 1px solid #C1DAD7;
+	border-right: 1px solid #d4dae8;
 	background: none;
 }
 
 td {
-	border-bottom: 1px solid #C1DAD7;
-	border-left: 1px solid #C1DAD7;
-	border-top: 1px solid #C1DAD7;
+	border-bottom: 1px solid #d4dae8;
+	border-left: 1px solid #d4dae8;
+	border-top: 1px solid #d4dae8;
 	background: #fff;
 	padding: 6px 6px 6px 12px;
 }
@@ -236,7 +237,7 @@ td {
 	}
 
 #mailForm td{
-		border-right: 1px solid #C1DAD7;
+		border-right: 1px solid #d4dae8;
 
 	}
 

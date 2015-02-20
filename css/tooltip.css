@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .ui-tooltip, .arrow:after {
-    background: #ABFF96;
+    background: #eceff6;
     border: 3px solid white;
   }
   .ui-tooltip {

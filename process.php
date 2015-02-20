@@ -1,9 +1,9 @@
 <?php session_start(); ?>
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-
-
 include('dbconnector.php');
+
+	
 $domain_name = $_POST['domain_name'];
 $domain_usage = $_POST['domain_usage'];
 $domainOwner = $_POST['domainOwner'];
@@ -101,4 +101,8 @@ if (!($result1 && $result2 && $result3 && $result4  ) ){
 //unset($value);
 
 //session_destroy();
+
+
+
+
 ?>

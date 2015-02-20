@@ -157,14 +157,13 @@ jQuery.ajax({
 </head>
 <body onLoad="collapsePages()">
 
-<div class="header">Please Fill All The required Information in order to complete your domain registration !</div>
+<div class="header"> Africom ZISPA Domain Registration Form!</div>
 
 
 <form method="post" action="process.php" onSubmit="return" id="regform">
 
 <fieldset>
 
-<legend>Africom ZISPA Domain Registration Form</legend>
 
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
@@ -362,8 +361,10 @@ jQuery.ajax({
  
   </tr>
        </table>
-            
+     <p >       
+    <label for="submitbutton">Submit Your Form:</label> 
     <input type="submit" value="Submit" name="register" id="register" class="submit_b">
+   </p>
     
 </fieldset>
 </form>
