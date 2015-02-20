@@ -176,9 +176,9 @@ the line above was for me to see if the template is being passed from the previo
 <div class="title"><a href="#" >Click to SEND YOUR TEMPLATE to ZISPA or if you want to Attach Supporting Documents</a></div>
 	<div class="mail">
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
-	
-		  
-			<div class="mail_input_labels"> Your Name Please : </div>
+	  <fieldset>		 
+      <legend>Release Letter Attachment Form</legend> 
+			<div class="mail_input_labels"> Your Name : </div>
             
 			    <div class="form_inputfileds">
             	<input type="text" id="name" name="name"  placeholder='User Name'  title="We only need it for records purposes" />
@@ -230,7 +230,7 @@ the line above was for me to see if the template is being passed from the previo
 
 	   <div class="mail_input_labels"> Send Template: </div>
        <div class="form_inputfileds"><input type="submit" value="Send Mail!" id='submit_btn' name="submit_btn" class="submit_b"/></div>
-		
+        </fieldset>
 		</form>
         
         </div>
