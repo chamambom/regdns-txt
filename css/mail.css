@@ -9,8 +9,8 @@
 
 .mail{
   width: 70%;
-  margin:0 auto;
-  display:none;
+  margin:15px auto 0px auto;
+  display:block;
 }
 
 .mail_input_labels{

@@ -165,7 +165,7 @@ echo"<div class='header'> Please attach associated documents for domain $full_do
 <?php 
 
 echo"<div class='full_template'>";
-echo"<div class='field_widget_z'>The Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa </div>";
+echo"<div class='field_widget_z'>Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa ,ONLY attach a release letter if you are modifying the domain </div>";
 
 /* "<a href='./{$downloadFileName}'>View Template</a>          
 
@@ -173,7 +173,6 @@ the line above was for me to see if the template is being passed from the previo
 */
 ?>
 
-<div class="title"><a href="#" >Click to SEND YOUR TEMPLATE to ZISPA or if you want to Attach Supporting Documents</a></div>
 	<div class="mail">
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
 	  <fieldset>		 
@@ -243,7 +242,7 @@ the line above was for me to see if the template is being passed from the previo
 	<script>
 	
 	
-	//this coe below is for the attachment form
+	/* this coe below is for the attachment form
 	
         $('.title').click(function(){
             var txt = "Hide Attachment Form";
@@ -257,7 +256,7 @@ the line above was for me to see if the template is being passed from the previo
 
             $(".mail").slideToggle("medium");
         });
- 
+*/ 
 	
 	
   (function($){
