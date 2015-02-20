@@ -66,11 +66,8 @@ try {
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 0; // set word wrap	
 	//$mail->AddAttachment($_FILES['letter']['tmp_name'], $_FILES['letter']['name']);
-   $mail->AddAttachment($downloadFileName,$downloadFileName);	
-   $mail->AddAttachment($_FILES['letter']['tmp_name'],
-                           $_FILES['letter']['name']);
-
-	
+     $mail->AddAttachment($downloadFileName,$downloadFileName);	
+  
 	$mail->IsHTML(true); // send as HTML
 	$mail->Send();
 	
