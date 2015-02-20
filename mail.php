@@ -70,8 +70,8 @@ try {
 	$mail->AddAttachment($_FILES['attachedtemplate']['tmp_name'],
                          $_FILES['attachedtemplate']['name']);
 
-	$mail->AddAttachment($_FILES['letter']['tmp_name'],
-                         $_FILES['letter']['name']);
+	//$mail->AddAttachment($_FILES['letter']['tmp_name'],
+                         //$_FILES['letter']['name']);
 
 	
 	$mail->IsHTML(true); // send as HTML
