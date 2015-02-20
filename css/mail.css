@@ -8,13 +8,12 @@
 
 
 .mail{
-  width: 70%;
   margin:15px auto 0px auto;
   display:block;
 }
 
 .mail_input_labels{
-	width:25%;
+	width:35%;
 	padding:20px;
 
 	}
@@ -24,24 +23,18 @@
 	position:relative;
 	}
 	
+#attachedtemplate{
+	background:#ffebe8;
+	   border: 2px solid #dd3c10;
+	   font-size:16px;
+	   font-weight:bold;
 	
+	}	
 
 #image{
 
 height: 30px;
 }
-.title{
-    text-align: center;
-    margin: 20px 0 5px 0;
-    background:#eceff6;
-    border:1px solid #d4dae8;
-	color:#3b5998;
-	text-align:center;
-	font-size:17px;
-	padding:12px 5px;
-	border-radius:4px;
-}
-
 .form-input:focus{
    color: #3D991F;
    border: 1px solid green;

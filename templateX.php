@@ -196,10 +196,17 @@ the line above was for me to see if the template is being passed from the previo
 			    <div class="mail_input_labels"> Subject : </div>
 				<div class="form_inputfileds">                
              <input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'  title="(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here"/>
-                    <span id="invalid-subject" class="error_msg"></span>
-                	
+                    <span id="invalid-subject" class="error_msg"></span>               	
 				   
 				</div>
+                
+         <div class="mail_input_labels"> Attached Template: </div>
+			<div class="form_inputfileds"  >
+         <input type="text" id="attachedtemplate" name="attachedtemplate" value='<?php  echo  $downloadFileName ; ?>'  disabled /> <span>Template Automatically Attached</span>
+
+ 
+             </div>
+
 			
 			 
 			
