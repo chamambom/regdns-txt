@@ -31,10 +31,10 @@
                 message: "Please enter a valid mobile phone number"
                 });
 				
-                /*jQuery("#validcustomerdomainname").validate({
+                jQuery("#validcustomerdomainname").validate({
                     expression: "if (VAL) return true; else return false;",
-                    message: " Please note that this field is a Required"
-                });*/
+                    message: " This field is Required ,"
+                });
 				
 				jQuery("#validdomain_owner_org_desc").validate({
                     expression: "if (VAL) return true; else return false;",
@@ -103,7 +103,9 @@ function username_check(){
 var domain_name = $('#validcustomerdomainname').val();
 
 if(domain_name == "" || domain_name.length < 4){
-$('#validcustomerdomainname').css('border', '3px #C33 solid');
+$('#validcustomerdomainname').css({'border':'3px #C33 solid'});
+
+
 $('#tick').hide();
 $('#dlength').show();
 $('#valid').hide();	

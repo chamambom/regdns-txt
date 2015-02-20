@@ -27,8 +27,7 @@ fieldset {
 }
 
 legend {
-	font-weight:bold;
-	color:#8DC73F;
+	color:#666;
 
 	}
 
@@ -51,7 +50,7 @@ input[type=text], input[type=tel] ,input[type=email]  ,input[type=file] {
 
 }
 textarea {
-    padding:8px 5px;
+    padding:5px 5px;
 	width:220px;
     height:60px;
 	position:inherit; 
@@ -73,7 +72,6 @@ textarea {
 	height:35px; 
     width:230px; 
     padding:8px 5px;
-
     border:1px solid #0C0;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;	
@@ -273,7 +271,9 @@ td.alt {
 
 #dlength{
 	display:none;
-		color:#C33;
+    color: #D00;
+		font-style:italic;
+		font-size: 12px;
 
 }
 
