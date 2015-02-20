@@ -219,13 +219,10 @@ the line above was for me to see if the template is being passed from the previo
 			
 			    <div class="mail_input_labels" > Message : </div>
 				<div class="form_inputfileds">
-                <textarea name="message" id="message" title="Domains sent to ZISPA can only be Modified (M) , Deleted (D) or Newly                   Registered (N)
-                
-                so the following messages are the only ones applicable 
-                                
-            If its New Domain ,message will be e.g: register NEW domain afri-com.co.zw
-            If its MODIFY Domain ,message will be e.g: Modify domain afri-com.co.zw and this is the only time that you attach a release   letter from the current ISP
-            If its Delete Domain ,message will be e.g: DELETE domain afri-com.co.zw and there is no attachment">
+                <textarea name="message" id="message" title=" 
+            New Domain ,message is: register NEW domain afri-com.co.zw
+            MODIFY Domain ,message is: Modify domain afri-com.co.zw 
+            Delete Domain ,message is: DELETE domain afri-com.co.zw ">
   
   </textarea><span id="invalid-message" class="error_msg"></span>
                 </div>
