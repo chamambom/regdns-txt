@@ -4,6 +4,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/jquery.validate.css" />
         <link rel="stylesheet" href="css/justthetip.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
        <script src="js/jquery-1.3.2.js" type="text/javascript">       </script>
        <script src="js/jquery.validate.js" type="text/javascript"></script>
        <script src="js/justthetip.js"></script>
@@ -153,21 +154,22 @@ jQuery.ajax({
 
 <meta charset="UTF-8">
 <title>Add Records Form</title>
-<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body onLoad="collapsePages()">
+<body>
+
+
 
 <div class="header"> Africom ZISPA Domain Registration Form!</div>
 
 
-<form method="post" action="process.php" onSubmit="return" id="regform">
+<form method="post" action="process.php" id="regform">
 
 <fieldset>
 
 
     	<p>
     	<label for="customerdomainname">Full Customer Domain Name:</label>
-        <input type="text" name="domain_name"  id="validcustomerdomainname">  
+        <input type="text" name="domain_name"  id="validcustomerdomainname"> 
         <img id="tick" src="images/tick.png" width="16" height="16"/>
         <img id="cross" src="images/cross.png" width="16" height="16"/>
         <span id="valid">Domain is available for registration</span>
@@ -187,7 +189,7 @@ jQuery.ajax({
         <p>
         <label for="state">Domain Status:</label>
         <select name="domstatus" class="selectbox" id="domainstatus" size="1"> 
-        <option value="0" selected>Select Below </option> 
+        <option value="0" selected>Select Below</option> 
         <option value="N">New</option>
   		<option value="D">Delete</option>
   		<option value="M">Modify</option>
@@ -368,6 +370,7 @@ jQuery.ajax({
     
 </fieldset>
 </form>
+
 <div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>
 
 </body>

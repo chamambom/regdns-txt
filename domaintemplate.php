@@ -3,7 +3,6 @@ session_start();
 error_reporting (E_ALL ^ E_NOTICE);
 
 ?>
-<link rel="stylesheet" type="text/css" href="css/domtables.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
  <script src="js/jquery-ui.js"></script>
  <link rel="stylesheet" href="css/jquery-ui.css"/>        
