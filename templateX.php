@@ -195,7 +195,7 @@ the line above was for me to see if the template is being passed from the previo
 		
 			    <div class="mail_input_labels"> Subject : </div>
 				<div class="form_inputfileds">                
-             <input type="text" id="subject" name="subject" placeholder='e.g New:africom.co.zw'  title="(N)ew or (M)odify or (D)elete.(N/M/D).:Domain name here"/>
+             <input type="text" id="subject" name="subject" placeholder='New:'  title=" Just type either New: or Modify: or Delete:"/>
                     <span id="invalid-subject" class="error_msg"></span>               	
 				   
 				</div>
@@ -212,17 +212,14 @@ the line above was for me to see if the template is being passed from the previo
 			
 			    <div class="mail_input_labels"> Release Letter : </div>
 			<div class="form_inputfileds">
-           <input type="file" id="letter" name="letter"  placeholder='Release Letter' title=" You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify:domain name"/> <span id="invalid-letter" class="error_msg"></span>
+           <input type="file" id="letter" name="letter"  placeholder='Release Letter' title=" You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify"/> <span id="invalid-letter" class="error_msg"></span>
                             
              </div>
          			 
 			
 			    <div class="mail_input_labels" > Message : </div>
 				<div class="form_inputfileds">
-                <textarea name="message" id="message" title=" 
-            New Domain ,message is: register NEW domain afri-com.co.zw
-            MODIFY Domain ,message is: Modify domain afri-com.co.zw 
-            Delete Domain ,message is: DELETE domain afri-com.co.zw ">
+                <textarea name="message" id="message" title=" Just type either Register or Modify or Delete">
   
   </textarea><span id="invalid-message" class="error_msg"></span>
                 </div>

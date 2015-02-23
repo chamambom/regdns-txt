@@ -313,15 +313,6 @@ if (!($result1 && $result2 && $result3 && $result4  ) ){
 	
 	
 		
-//Code sources to be tried
-
-//$address_type_id2= $_POST['address_type_id2'];
-//foreach ( $address_type_id as $key => $value )
-//{
-//  echo 'Textbox #'.htmlentities($key).' has value: ';
-//  echo htmlentities($value);
-//}
-//unset($value);
 
 //session_destroy();
 
