@@ -14,29 +14,47 @@ $domain_nameErr = $domain_usageErr = $domainOwnerErr = $domain_owner_org_nameErr
 $domain_name = $domain_usage = $domainOwner = $domain_owner_org_name = $hosting_company_id = $domain_owner_org_desc = $city = $domstatus =$physical_address_detail = $postal_address_detail = $voicephone = $faxnumber = $mobilenumber = $emailaddress = $country_id = $host_name1= $host_name2 = $host_name3 = $host_name4 = $ip_address1 = $ip_address2 = $ip_address3 = $ip_address4= "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	
+/*	$name = test_input($_POST["name"]);
+if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed"; 
+}
+*/
 
 if (empty($_POST['domain_name'])) {
      $domain_nameErr=  "Domain name is required" ;
   } else {
     $domain_name = test_input($_POST['domain_name']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$domain_name)) {
+      $domain_nameErr = "Domain name Only requires letters and white space"; 
+    }
   }
   
   if (empty($_POST['domain_usage'])) {
     $domain_usageErr = "Domain usage is required";
   } else {
     $domain_usage = test_input($_POST['domain_usage']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$domain_usage)) {
+      $domain_usageErr = "Domain Usage Only requires letters and white space";
+	}
   }
 
   if (empty($_POST['domainOwner'])) {
     $domainOwnerErr = "Domain Owner is required";
   } else {
     $domainOwner = test_input($_POST['domainOwner']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$domainOwner)) {
+      $domainOwnerErr = "Domain Owner Only requires letters and white space";
+	}
   }
   
     if (empty($_POST['domain_owner_org_name'])) {
     $domain_owner_org_nameErr = "Domain Owner Organisation Name is required";
   } else {
     $domain_owner_org_name = test_input($_POST['domain_owner_org_name']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$domain_owner_org_name)) {
+      $domain_owner_org_nameErr = "Domain Owner Organisation Name Only requires letters and white space";
+	}
   }
 
     if (empty($_POST['hosting_company_id'])) {
@@ -50,12 +68,18 @@ if (empty($_POST['domain_name'])) {
     $domain_owner_org_descErr = "Description of domain owner organisation is required";
   } else {
     $domain_owner_org_desc = test_input($_POST['domain_owner_org_desc']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$domain_owner_org_desc)) {
+      $domain_owner_org_descErr = "Domain Owner Organisation Description Only requires letters and white space";
+	}
   }
 
    if (empty($_POST['city'])) {
     $cityErr = "City is required";
   } else {
     $city = test_input($_POST['city']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$city)) {
+      $cityErr = "Domain Owner City/Town Only requires letters and white space";
+	}
   }
   
   
@@ -63,24 +87,36 @@ if (empty($_POST['domain_name'])) {
     $domstatusErr = "Status of domain is required";
   } else {
     $domstatus = test_input($_POST['domstatus']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$domstatus)) {
+      $domstatusErr = "Domain Status Only requires letters and white space";
+	}
   }
 
       if (empty($_POST['physical_address_detail'])) {
     $physical_address_detailErr = "Physical address is required";
   } else {
     $physical_address_detail = test_input($_POST['physical_address_detail']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$physical_address_detail)) {
+      $physical_address_detailErr = "Physical Address Only requires letters and white space";
+	}
   }
 
       if (empty($_POST['postal_address_detail'])) {
     $postal_address_detailErr = "Postal address is required";
   } else {
     $postal_address_detail = test_input($_POST['postal_address_detail']);
+	if (!preg_match("/^[a-zA-Z ]*$/",$postal_address_detail)) {
+      $postal_address_detailErr = "Postal Address Only requires letters and white space";
+	}
   }
 
       if (empty($_POST['contact_detail_1'])) {
     $voicephoneErr = "Work Phone is required";
   } else {
     $voicephone = test_input($_POST['contact_detail_1']);
+	//if (!preg_match("/^[a-zA-Z ]*$/",$voicephone)) {
+     // $voicephoneErr = "Work phone Only requires letters and white space";
+	//}
   }
   
   
@@ -88,6 +124,10 @@ if (empty($_POST['domain_name'])) {
     $faxnumberErr = "Fax Number is required";
   } else {
     $faxnumber = test_input($_POST['contact_detail_2']);
+		//if (!preg_match("/^[a-zA-Z ]*$/",$faxnumber)) {
+     // $faxnumberErr = "Fax number Only requires letters and white space";
+		//}
+
   }
   
 
@@ -95,12 +135,20 @@ if (empty($_POST['domain_name'])) {
     $mobilenumberErr = "Mobile Phone number is required";
   } else {
     $mobilenumber = test_input($_POST['contact_detail_3']);
+	//if (!preg_match("/^[a-zA-Z ]*$/",$mobilenumber)) {
+     // $mobilenumberErr = "Mobile number  Only requires letters and white space";
+	//}
+
   }
 
   if (empty($_POST['contact_detail_4'])) {
     $emailaddressErr = "Email Address is required";
   } else {
     $emailaddress = test_input($_POST['contact_detail_4']);
+// check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailaddressErr = "Invalid email format"; 
+    }
   }
 
   if (empty($_POST['country_id'])) {
