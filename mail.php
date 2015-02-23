@@ -38,7 +38,7 @@ try {
 						 </tr>	  
 							<tr><td></td> </tr>
 						 <tr>
-							 <td>Please ".$_POST['message']. "</td>
+							 <td>Please ".$_POST['message']. " $full_domain_name </td>
 						</tr>
 							<tr><td></td> </tr>
 							  <tr>
