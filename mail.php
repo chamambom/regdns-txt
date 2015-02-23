@@ -24,7 +24,7 @@ try {
 	$registrant= $_POST['name']; 
     $to = $_POST['email'];
 	$mail->AddAddress($to);
-    $mail->Subject    = $_POST['subject'];
+    $mail->Subject    = $_POST['subject'] ."$full_domain_name ";
 	$mail->From       = "dns-admin@africominternet.co.zw";
     $mail->FromName  = "Africom DNS Administrator";
 	
@@ -38,7 +38,7 @@ try {
 						 </tr>	  
 							<tr><td></td> </tr>
 						 <tr>
-							 <td>Please ".$_POST['message']. " $full_domain_name </td>
+							 <td>Please ".$_POST['message']. " domain $full_domain_name </td>
 						</tr>
 							<tr><td></td> </tr>
 							  <tr>
