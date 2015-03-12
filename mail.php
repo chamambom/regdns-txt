@@ -63,7 +63,10 @@ try {
 
 	$mail->IsSendmail();  // tell the class to use Sendmail
 	$mail->AddReplyTo("smc@afri-com.net");
-	$mail->AddAddress("chamambom@afri-com.net");
+	$mail->AddAddress("smc@afri-com.net");
+	$mail->AddAddress("dns-admin@africominternet.co.zw");
+	$mail->AddReplyTo("dns-admin@africominternet.co.zw");
+	
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 0; // set word wrap	
     $mail->AddAttachment($downloadFileName,$downloadFileName);	
