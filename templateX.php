@@ -165,7 +165,7 @@ echo"<div class='header'> Please attach associated documents for domain $full_do
 <?php 
 
 echo"<div class='full_template'>";
-echo"<div class='field_widget_z'>Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa ,ONLY attach a release letter if you are modifying the domain </div>";
+echo"<div class='field_widget_z'>Template " . $downloadFileName . " is already attached on the form below and ready to send to Zispa </div>";
 
 /* "<a href='./{$downloadFileName}'>View Template</a>          
 
@@ -176,7 +176,7 @@ the line above was for me to see if the template is being passed from the previo
 	<div class="mail">
 	  <form action='mail.php' method='post' id='mailForm' enctype='multipart/form-data'>
 	  <fieldset>		 
-      <legend>Release Letter Attachment Form</legend> 
+      <legend>Template Attachment Form</legend> 
 			<div class="mail_input_labels"> Your Name : </div>
             
 			    <div class="form_inputfileds">
@@ -195,7 +195,7 @@ the line above was for me to see if the template is being passed from the previo
 		
 			    <div class="mail_input_labels"> Subject : </div>
 				<div class="form_inputfileds">                
-             <input type="text" id="subject" name="subject" placeholder='New:'  title=" Just type either New: or Modify: or Delete:"/>
+             <input type="text" id="subject" name="subject" placeholder='New:'  title=" Just type either New:"/>
                     <span id="invalid-subject" class="error_msg"></span>               	
 				   
 				</div>
@@ -210,16 +210,16 @@ the line above was for me to see if the template is being passed from the previo
 			
 			 
 			
-			    <div class="mail_input_labels"> Release Letter : </div>
+<!--			    <div class="mail_input_labels"> Release Letter : </div>
 			<div class="form_inputfileds">
            <input type="file" id="letter" name="letter"  placeholder='Release Letter' title=" You only need to attach a release letter only if you are transfering a Domain from one ISP to another : ie Modify"/> <span id="invalid-letter" class="error_msg"></span>
                             
              </div>
          			 
-			
+-->			
 			    <div class="mail_input_labels" > Message : </div>
 				<div class="form_inputfileds">
-                <textarea name="message" id="message" title=" Just type either Register or Modify or Delete">
+                <textarea name="message" id="message" title=" Just type Register:">
   
   </textarea><span id="invalid-message" class="error_msg"></span>
                 </div>

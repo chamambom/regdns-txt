@@ -1,0 +1,26 @@
+DNS REGISTRATION URLS
+
+http://www.w3schools.com/php/php_form_required.asp
+http://stackoverflow.com/questions/3190464/php-check-if-any-posted-vars-are-empty-form-all-fields-required
+http://papermashup.com/jquery-php-mysql-username-availability-checker/
+http://devtacular.com/articles/bkonrad/how-to-style-an-application-like-facebook
+https://extrafuture.com/code/just-the-tip/
+http://jqueryui.com/tooltip/
+http://readwrite.com/2013/10/02/github-for-beginners-part-2
+http://www.9lessons.info/2012/04/file-upload-progress-bar-with-jquery.html
+http://www.w3bees.com/2013/02/multiple-file-upload-with-php.html
+http://www.sanwebe.com/2014/04/ajax-contact-form-attachment-jquery-php
+http://www.smarttutorials.net/send-an-e-mail-with-attachment-using-jquery-ajax-and-php-without-refrshing-a-page/
+http://stackoverflow.com/questions/3791414/storing-form-data-as-a-session-variable
+http://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
+http://php.about.com/od/advancedphp/ss/php_sessions_2.htm
+http://www.formget.com/read-mysql-data-using-php/
+http://www.geektantra.com/2009/09/jquery-live-form-validation/
+http://www.geektantra.com/projects/jquery-form-validate/advanced_demo/
+http://www.toptal.com/php/10-most-common-mistakes-php-programmers-make
+http://toroid.org/ams/git-website-howto
+http://www.gitguys.com/topics/shared-repositories-should-be-bare-repositories/
+http://www.gitguys.com/topics/creating-a-shared-repository-users-sharing-the-repository/
+http://rogerdudler.github.io/git-guide/
+http://www.html-form-guide.com/php-form/php-order-form.html
+http://www.unixmen.com/install-gitblit-ubuntu-fedora-centos/

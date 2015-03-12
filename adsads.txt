@@ -40,18 +40,18 @@
       0.  ZW DOMAIN TEMPLATE....: 3.1.4 - 13/02/2003
 
       1.  DOMAIN NAME and ACTION
-      1a. Full domain name......................: sdfsdf
+      1a. Full domain name......................: adsads
       1b. (N)ew or (M)odify or (D)elete.(N/M/D).: N
 
       2.  DOMAIN OWNER
-      2a. Domain Owner..........: sdfsdfsfd
-      2b. Organisation Name.....: sdfsd
-      2c. Physical Address......: sdfsdfs
-      2d. Postal Address .......: JHLKK
-      2e. Town/City.............: Harare
+      2a. Domain Owner..........: adadsad
+      2b. Organisation Name.....: asdas
+      2c. Physical Address......: asdads
+      2d. Postal Address .......: asdasdas
+      2e. Town/City.............: Gweru
       2f. Country...............: Zimbabwe
-      2g. Voice Phone...........: 2342
-      2h. Fax Number............: 234243
+      2g. Voice Phone...........: 123132
+      2h. Fax Number............: 123131
       2i. E-mail Address........: chamambom@gmail.com
 	  
       3.  ADMIN/BILLING CONTACT
@@ -67,8 +67,8 @@
       3j. E-mail Address........: smc@afri-com.net
    
       4.  DESCRIPTION OF ORGANISATION/DOMAIN
-      4a. Description of domain owner's organisation..: sdfsfds
-      4b. Proposed domain usage.: khhkhj
+      4a. Description of domain owner's organisation..: adadsa
+      4b. Proposed domain usage.: adada
 
       5.  TECHNICAL CONTACT
       5a. ZISPA Handle..........: Africom
@@ -106,4 +106,4 @@
       following street address
       (Note: Post Office box or
       Post Office bag addresses
-      are not acceptable).......: sdfsdfs
+      are not acceptable).......: asdads
