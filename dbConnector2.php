@@ -9,13 +9,13 @@ function DbConnector(){
 
         // Get the main settings from the array we just loaded
         $host = 'localhost';
-        $db = 'africomdomains';
+        $db = 'ltzdomains';
         $user = 'root';
-        $pass = 'CDMA1xafri';
+        $pass = 'Beautiful1987#';
 
         // Connect to the database
-        $this->link = mysql_connect($host, $user, $pass);
-        mysql_select_db($db);
+        $this->link = mysqli_connect($host, $user, $pass);
+        mysqli_select_db($db);
         register_shutdown_function(array(&$this, 'close'));
 
     }
@@ -24,21 +24,21 @@ function DbConnector(){
     function query($query) {
 
         $this->theQuery = $query;
-        return mysql_query($query, $this->link);
+        return mysqli_query($query, $this->link);
 
     }
 
     //*** Function: fetchArray, Purpose: Get array of query results ***
     function fetchArray($result) {
 
-        return mysql_fetch_array($result);
+        return mysqli_fetch_array($result);
 
     }
 
     //*** Function: close, Purpose: Close the connection ***
     function close() {
 
-        mysql_close($this->link);
+        mysqli_close($this->link);
 
     }
 	

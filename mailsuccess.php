@@ -13,7 +13,7 @@ $downloadFileName=$_SESSION['downloadFileName'];
 $registrant= $_SESSION['name']; 
 
 
-echo"<div class='header'> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  dns-admin@africominternet.co.zw for ZISPA Confirmation  </div>";	
+echo"<div class='header'> Thank you very much $registrant for sending $full_domain_name template to ZISPA, Check your email  ltzadmin@liquidtelecom.com for ZISPA Confirmation  </div>";
 		
 	echo"<div class='full_template'>";
 	echo 'Your Template has been sent to ZISPA.';
@@ -21,7 +21,7 @@ echo"<div class='header'> Thank you very much $registrant for sending $full_doma
 echo "</div>";
 
 
-echo "<div class='footer'>Courtesy of the Service Management Center (SMC) Africom @2015 <a href='http://www.afri-com.net'>www.afri-com.net</a></div>";
+echo "<div class='footer'>Courtesy of the Zimbabwe IS @2017 <a href='#'>LTZ</a></div>";
 
 
 

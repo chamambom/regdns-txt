@@ -24,7 +24,7 @@ html body {
 	  
 
 fieldset {
-	border:solid 2px #FF9F9F;
+	border:solid 2px #227AAA;;
     padding-left:12px;
     width:83%;
   	margin: 0 auto;
@@ -171,7 +171,7 @@ p{
 .header{
 color:#fff;
 font-size:17px;
-background-color:#EF413D;
+background-color:#227AAA;;
 text-align:center;
 width:84.3%;
 margin: 5px auto 1px auto;
@@ -180,7 +180,7 @@ border-radius:4px;
 	}
 .footer{
 color:#CCC;
-background-color:#EF413D;
+background-color:#227AAA;;
 text-align:center;
 width:83%;
 margin: 1px auto 3px auto;

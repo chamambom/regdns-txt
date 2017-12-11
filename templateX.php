@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset='utf-8'>
-
 <link rel="stylesheet" href="css/mail.css"/>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -70,48 +69,40 @@ function ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $dom
       2i. E-mail Address........: {$domain_owner_emailaddress}
 	  
       3.  ADMIN/BILLING CONTACT
-      3a. ZISPA Handle..........: Africom
-      3b. Contact Name..........: SMC
-      3c. Organisation Name.....: Africom
-      3d. Physical Address .....: Block 3 Tendeseka Park Samora Machel Eastlea
-      3e. Postal Address .......: Box 4556 Harare
+      3a. ZISPA Handle..........: liquidtelecom
+      3b. Contact Name..........: DNS ADMIN
+      3c. Organisation Name.....: Liquid Telecom Zimbabwe
+      3d. Physical Address .....: 5th Floor ZB Life Towers Sam Nujoma/Jason Moyo Avenue
+      3e. Postal Address .......: 5th Floor ZB Life Towers Sam Nujoma/Jason Moyo Avenue
       3f. Town/City.............: Harare
       3g. Country...............: Zimbabwe
-      3h. Voice Phone...........: +263 8644 400
-      3i. Fax Number............: +263 4 252118	
-      3j. E-mail Address........: smc@afri-com.net
+      3h. Voice Phone...........: 08677033000
+      3i. Fax Number............:
+      3j. E-mail Address........: ltzdnsadmin@liquidtelecom.com
    
       4.  DESCRIPTION OF ORGANISATION/DOMAIN
       4a. Description of domain owner's organisation..: {$domain_owner_org_desc}
       4b. Proposed domain usage.: {$domain_usage}
 
       5.  TECHNICAL CONTACT
-      5a. ZISPA Handle..........: Africom
-      5b. Contact Name..........: SMC
-      5c. Organisation Name.....: Africom
-      5d. Physical Address .....: Block 3 Tendeseka Park Samora Machel Eastlea
-      5e. Postal Address .......: Box 4556 Harare
+      5a. ZISPA Handle..........: liquidtelecom
+      5b. Contact Name..........: DNS ADMIN
+      5c. Organisation Name.....: Liquid Telecom Zimbabwe
+      5d. Physical Address .....: 5th Floor ZB Life Towers Sam Nujoma/Jason Moyo Avenue
+      5e. Postal Address .......: 5th Floor ZB Life Towers Sam Nujoma/Jason Moyo Avenue
       5f. Town/City.............: Harare
       5g. Country...............: Zimbabwe
-      5h. Voice Phone...........: +263 8644 400
-      5i. Fax Number............: +263 4 252119
-      5j. E-mail Address........: smc@afri-com.net
+      5h. Voice Phone...........: 08677033000
+      5i. Fax Number............:
+      5j. E-mail Address........: ltzdnsadmin@liquidtelecom.com
 
       6.  PRIMARY NAMESERVER
-      6a. Hostname..............: ns1.ai.co.zw
-      6b. IP Address............: 41.221.144.2
+      6a. Hostname..............: ns1.liquidtelecom.net
+      6b. IP Address............: 5.11.11.1
 
           SECONDARY NAMESERVER
-      6c. Hostname..............: ns2.ai.co.zw
-      6d. IP Address............: 41.221.144.3
- 
-          SECONDARY NAMESERVER
-      6e. Hostname..............: ns3.ai.co.zw
-      6f. IP Address............: 41.73.47.133
- 
-          SECONDARY NAMESERVER
-      6g. Hostname..............: ns4.ai.co.zw
-      6h. IP Address............: 41.221.159.50
+      6c. Hostname..............: ns2.liquidtelecom.net
+      6d. IP Address............: 5.11.11.10
 
       7.  DOMICILIUM CITANDI ET EXECUTANDI
       The organisation specified
@@ -145,16 +136,11 @@ $domain_owner_emailaddress=$_SESSION['emailaddress'];
 $domain_owner_org_desc=$_SESSION['domain_owner_org_desc'];
 $domain_usage=$_SESSION['domain_usage'];
 
-
-
-
-
 $downloadFileName = ZwDomainTemplate($full_domain_name, $domain_status, $domain_owner, $domain_owner_org_name,$physical_address_detail, $postal_address_detail, $domain_owner_city, $domain_owner_country_name, $domain_owner_voice_phone, $domain_owner_faxnumber, $domain_owner_emailaddress,$domain_owner_org_desc,$domain_usage);
 
 $_SESSION['downloadFileName'] = $downloadFileName;
 
 echo"<div class='header'> Please attach associated documents for domain $full_domain_name with domain Owner $domain_owner before sending to ZISPA </div>";	
-
 
 
 ?>

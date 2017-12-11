@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="css/jquery-ui.css"/>        
 
 <?php
-
+error_reporting (E_ALL ^ E_NOTICE);
 if(isset($_GET['domain_id']))
 $domain_id=$_GET['domain_id'];
 

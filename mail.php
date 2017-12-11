@@ -25,8 +25,8 @@ try {
     $to = $_POST['email'];
 	$mail->AddAddress($to);
     $mail->Subject    = $_POST['subject'] ."$full_domain_name ";
-	$mail->From       = "dns-admin@africominternet.co.zw";
-    $mail->FromName  = "Africom DNS Administrator";
+	$mail->From       = "ltzdnsadmin@liquidtelecom.com";
+    $mail->FromName  = "LTZ DNS Administrator";
 	
 	
 	
@@ -62,10 +62,10 @@ try {
 	//$mail->Password   = "password";            // SMTP server password
 
 	$mail->IsSendmail();  // tell the class to use Sendmail
-	$mail->AddReplyTo("smc@afri-com.net");
-	$mail->AddAddress("smc@afri-com.net");
-	$mail->AddAddress("dns-admin@africominternet.co.zw");
-	$mail->AddReplyTo("dns-admin@africominternet.co.zw");
+	$mail->AddReplyTo("ltzdnsadmin@liquidtelecom.com");
+	$mail->AddAddress("ltzdnsadmin@liquidtelecom.com");
+	$mail->AddAddress("ltzdnsadmin@liquidtelecom.com");
+	$mail->AddReplyTo("martin.chamambo@liquidtelecom.com");
 	
 	//$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 	//$mail->WordWrap   = 0; // set word wrap	
